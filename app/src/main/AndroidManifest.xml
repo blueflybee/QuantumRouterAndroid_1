@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.fernandocejas.android10.sample.presentation">
+
+    <!--友盟集成-->
+    <!--<uses-sdk android:minSdkVersion="8"></uses-sdk>-->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+
+    <!--猫眼 -->
+
+
+    <!-- 允许程序开机自动运行 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取当前WiFi接入的状态以及WLAN热点的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 访问电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 访问网络连接，可能产生GPRS流量 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 改变配置，允许当前应用改变配置，如定位 -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <!-- 挂载文件系统，挂载、反挂载外部文件系统 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 改变WiFi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 允许振动 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!--  -->
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <!-- 写入外部存储，允许程序写入外部存储，如SD卡上写文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 录制声音通过手机或耳机的麦克 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 读取系统底层日志 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <!-- 获取任务信息，允许程序获取当前或最近运行的应用 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 显示系统窗口 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 拍照权限，允许访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 拍照权限，闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 唤醒锁定，允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 修改声音设置信息 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 拨出电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!--二维码扫描-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+
+    <!--蓝牙权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
+    <!--获取通讯录权限-->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--logcat日志保存-->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <uses-feature android:name="android.hardware.camera2"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+
+
+    <application
+        android:name=".AndroidApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+
+        <!--samba 适配Android N >= 7.0 版本-->
+        <!--   <provider android:name="android.support.v4.content.FileProvider"
+                     android:authorities="com.qtec.router.mock.fileprovider"
+                     android:exported="true">
+           </provider>-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name=".view.login.welcome.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.login.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".view.selectconfig.ServerActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.selectconfig.SelectLockEncryptionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.main.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--登录-->
+
+        <!--注册-->
+        <activity
+            android:name=".view.login.register.RegisterGetIdCodeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.login.register.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.login.register.PersonalProfileActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--重置密码-->
+        <activity
+            android:name=".view.login.forgetpwd.ResetPwdGetIdCodeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.login.forgetpwd.ResetPwdActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--个人资料-->
+
+        <activity
+            android:name=".view.mine.myinfo.MyInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.myinfo.VersionInfoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.myinfo.ModifyPwdGetIdCodeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.myinfo.ModifyPwdActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--用户反馈-->
+        <activity
+            android:name=".view.mine.advicefeedback.AdviceFeedBackActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.advicefeedback.AdviceDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.advicefeedback.FeedBackAdviceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <activity
+            android:name=".view.mine.advicefeedback.AllQuestionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.advicefeedback.MyFeedBackActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.mine.advicefeedback.MyAdviceDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!--关于我们-->
+        <activity
+            android:name=".view.mine.aboutus.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.aboutus.GetAgreementActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.aboutus.GetSecretAgreementActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--设备共享-->
+        <activity
+            android:name=".view.mine.deviceshare.RouterListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.deviceshare.DeviceShareMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.deviceshare.ShareMemberListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.deviceshare.MemDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.mine.deviceshare.InputPhoneNumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AcceptInvitationTheme"/>
+
+        <activity
+            android:name=".view.device.router.status.BlackListActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".view.device.router.tools.wirelessrelay.WirelessUnconnectedDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+        <!--Q智家-->
+        <!--网关-->
+        <activity
+            android:name=".view.device.activity.SelectDevTypeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.addrouter.AddRouterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.addrouter.SearchRouterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.addrouter.AddRouterVerifyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.RouterMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.manageDevice.ModifyLockNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.RouterInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.ModifyRouterNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.RouterDesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.RouterGroupActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.setting.WifiSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.NetModeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.DHCPActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.StaticIpActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.PPPOEActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.ServiceProviderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.AdminPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.AdminNewPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.RestartRouterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.UpdateFirmwareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.UpdatingFirmwareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.VPNActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.setting.AddVPNActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.firstconfig.AgreeLicenseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.firstconfig.FirstConfigNetModeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.firstconfig.FirstConfigWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.firstconfig.FirstConfigPromptActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--电子猫眼-->
+        <activity
+            android:name=".view.device.cateye.activity.CatEyeMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name=".view.device.cateye.InputCatEyeNumActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.WaitConfigActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.ConnectWifiActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.CatEyeSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.ShowSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.ScreenOffTimeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.LanguageTypeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.TimeZoneActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.TimeZoneSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.ConnectLockActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.IntelligentSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.InfraredTriggerTimeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.DoorBellRecordListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.AboutCatEyeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.UnbindCatEyeActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".view.device.cateye.SendWaveActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.SearchLanCatActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.FirstConnectLockActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.TimeSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.cateye.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name=".view.device.cateye.activity.CatEyeDoorbellActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.cateye.activity.JVCatFilePlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!--摄像机-->
+        <activity
+            android:name=".view.device.camera.activity.CameraMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustPan"/>
+
+
+        <activity
+            android:name=".view.device.camera.activity.CameraSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.WarningSettingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.SafePeriodSetingActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.StorageManageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.VideoModeChooseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.AboutCameraActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.VideoReplyActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.camera.activity.CameraReplyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="adjustPan"/>
+
+
+        <!--高级工具管理-->
+        <activity
+            android:name=".view.device.router.tools.wirelessrelay.WirelessRelayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.wirelessrelay.WirelessRelayDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.wirelessrelay.WirelessRelayPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.wirelessrelay.WirelessRelayOtherActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.wifitimeswitch.WifiTimeSwitchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.wifitimeswitch.AddTimeIntervalActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.specialattention.SpecialAttentionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.specialattention.AddAttentionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.lightcontrol.LightControlActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.childcare.ChildCareActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.childcare.ChildCareDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.antifrictionnet.AntiFritNetMainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.antifrictionnet.WaitAuthDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.antifrictionnet.SetQuestionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.guestwifi.GuestWifiActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.signalregulation.SignalRegulationActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.firewall.FireWallMainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.directsafeinspection.SafeInspectionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.directsafeinspection.SafeInspectionDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.antifrictionnet.SetCustomQuestionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.bandspeedmeasure.BandSpeedMeasureActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.bandspeedmeasure.BandSpeedMeasureHisActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.intelligentband.IntelligentBandActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.intelligentband.BandSpeedLimitActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.intelligentband.ModeChooseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.antifrictionnet.AuthedDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.safestore.OtherFileUploadActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--独立门锁模块-->
+        <activity
+            android:name=".view.device.lock.activity.TouchLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.SearchLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockMatchPinActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.SetLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockPwdTouchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockInjectKeyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockPwdAgainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.KeepOnAddFingerprintActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockFpActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.CreateFingerprintNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.BindRouterToLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockBindRouterInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.ModifyLockPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.ModifyLockFpActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockCheckVersionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockUpdateFirmwareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.UnlockModeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.UnlockModeActivityForV15"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.PassagewayModeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.AddLockDoorCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.CreateDoorCardNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.ModifyLockDoorCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.ConnectLockTooLongActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.lock.activity.LockUserManageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.lock.activity.LockUserManageDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.lock.activity.LockFactoryResetActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.lock.activity.LockManageTipActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.lock.activity.LockTipsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.lock.activity.RemoteUnlockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <activity
+            android:name=".view.device.lock.activity.TempPwdActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.device.lock.activity.HooliganActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
+                  android:excludeFromRecents="true"
+                  android:exported="false"
+                  android:finishOnTaskLaunch="false"
+                  android:launchMode="singleInstance"
+                  android:theme="@style/HooliganActivityStyle"/>
+
+        <!-- -->
+        <activity
+            android:name=".view.device.router.status.RouterMemDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.status.DeviceNameActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.status.NetLimitActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.status.TimeLimitActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.status.SetDeviceNameActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.status.SetDeviceRemarkActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--安全模块-->
+        <activity
+            android:name=".view.safe.SafeTestActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--安全存储-->
+        <activity
+            android:name=".view.device.router.tools.safestore.RemoteMainActivity"
+            android:screenOrientation="portrait"/>
+        <!--图片多选器-->
+        <activity
+            android:name="com.yanzhenjie.album.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="图片选择"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden"/>
+
+        <activity
+            android:name=".view.device.router.tools.safestore.AudiosUploadActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.safestore.VideosUploadActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.tools.safestore.FormatingDiskActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.safestore.PictureRestoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.safestore.TransmitMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.router.tools.safestore.FileSearchActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".view.device.router.tools.safestore.MoveFileActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--密钥同步-->
+        <activity
+            android:name=".view.device.router.loadkey.MatchPinActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.router.loadkey.InjectKeyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.keystore.KeyInvalidActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+        <!--智能设备-->
+
+        <activity
+            android:name=".view.device.intelDev.addIntelDev.AddIntelDevVerifyActivity"
+            android:screenOrientation="portrait"/>
+        <!--智能锁-->
+        <activity
+            android:name=".view.device.lock.activity.LockMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.intelDev.managelock.LockUseNoteMoreActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.device.intelDev.managelock.ExceptionWarnMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.intelDev.managelock.AboutHardwareActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.intelDev.managelock.SetFingerNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.intelDev.fragment.AddFingerActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--消息中心-->
+        <activity
+            android:name=".view.message.receiver.OtherMessageListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.message.receiver.ShareMessageListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.message.receiver.MessageCenterActivity"
+            android:screenOrientation="portrait"/>
+        <!--<activity android:name=".view.mine.advicefeedback.AdviceFeedBackActivity" />-->
+
+        <activity
+            android:name=".view.message.receiver.AcceptInvitationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AcceptInvitationTheme"/>
+        <activity
+            android:name=".view.message.receiver.DealWarningInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AcceptInvitationTheme"/>
+
+        <!--lite网关-->
+        <activity
+            android:name=".view.device.litegateway.activity.LiteGatewayMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.LiteGatewaySettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.LiteGatewayInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.EsptouchDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.PairWifiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.LiteBindLockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.ModifyLiteGwNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.CheckLiteVersionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".view.device.litegateway.activity.LiteUpdateActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!--头像设置-->
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"
+            />
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+
+        <activity
+            android:name=".view.mine.myinfo.PhotoTestActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Polling Service -->
+        <service android:name=".service.polling.PollingService">
+            <intent-filter>
+                <action android:name="com.ai.service.PollingService"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".view.device.lock.service.BluetoothService"
+            android:exported="false"/>
+
+        <service
+            android:name="com.blueflybee.blelibrary.BleService"
+            android:exported="false"/>
+
+        <service android:name="com.fruit.updatelib.DownloadService"/>
+
+        <service
+            android:name=".view.device.lock.service.LockFirmwareDownloadService"
+            android:exported="false"/>
+
+
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <service android:name="com.blueflybee.mqttdroidlibrary.service.MQTTService"/>
+
+
+        <!-- 阿里云消息接收监听器 （用户可自主扩展） -->
+        <receiver
+            android:name=".view.message.receiver.YunOsMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 监测网络变化 -->
+        <receiver
+            android:name=".view.main.MainActivity$NetChangedReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+        <!--友盟统计分析 AppKey需要填写-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5aea82b5a40fa347660000c7"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="UMeng"/>
+
+        <!--&lt;!&ndash;阿里云消息推送 三点&ndash;&gt;-->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="24828902"/>
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="6a22d7833df13ace048df080e47c2cb3"/>
+
+        <!--阿里云消息推送 九州-->
+        <!-- <meta-data
+             android:name="com.alibaba.app.appkey"
+             android:value="24469608"/>
+         <meta-data
+             android:name="com.alibaba.app.appsecret"
+             android:value="38363c06e87c4d82883c8bbce04c964c"/>-->
+
+        <!--阿里云消息推送华为辅助弹窗-->
+        <activity
+            android:name=".view.message.receiver.HwPopupPushActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".view.sambatest.MountServerActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"/>
+
+
+        <provider
+            android:name=".view.sambatest.SambaDocumentsProvider"
+            android:authorities="com.google.android.sambadocumentsprovider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+
+
+        <activity android:name=".view.sambatest.RemoteMainActivity"/>
+
+        <!--微信分享-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

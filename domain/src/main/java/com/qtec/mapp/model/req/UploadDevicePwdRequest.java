@@ -1,0 +1,49 @@
+package com.qtec.mapp.model.req;
+
+/**
+ * <pre>
+ *     author : shaojun
+ *     e-mail : wusj@qtec.cn
+ *     time   : 2017/06/26
+ *     desc   :
+ *     version: 1.0
+ * </pre>
+ */
+public class UploadDevicePwdRequest {
+  private String deviceSerialNo;
+  private String userUniqueKey;
+  private String devicePass;
+
+  public String getDeviceSerialNo() {
+    return deviceSerialNo;
+  }
+
+  public void setDeviceSerialNo(String deviceSerialNo) {
+    this.deviceSerialNo = deviceSerialNo;
+  }
+
+  public String getUserUniqueKey() {
+    return userUniqueKey;
+  }
+
+  public void setUserUniqueKey(String userUniqueKey) {
+    this.userUniqueKey = userUniqueKey;
+  }
+
+  public String getDevicePass() {
+    return devicePass;
+  }
+
+  public void setDevicePass(String devicePass) {
+    this.devicePass = devicePass;
+  }
+
+  @Override
+  public String toString() {
+    return "UploadDevicePwdRequest{" +
+        "deviceSerialNo='" + deviceSerialNo + '\'' +
+        ", userUniqueKey='" + userUniqueKey + '\'' +
+        ", devicePass='" + devicePass + '\'' +
+        '}';
+  }
+}

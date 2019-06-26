@@ -1,0 +1,224 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_f5f5f5"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            >
+            <Button
+                android:id="@+id/btn_delete_upload"
+                android:layout_height="35dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/btn_red_pressed"
+                android:text="删除"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pictureRestore"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:background="@color/gray_f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="照片自动备份"
+                android:textColor="@color/black_424242"
+                android:textSize="12sp"
+                />
+
+            <include layout="@layout/restore_picture_layout"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView_Upload"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_pictureRestore"
+            android:layout_above="@id/rl_delete"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:background="@color/gray_f5f5f5"
+                        >
+                        <TextView
+                            android:id="@+id/tv_loading_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="31dp"
+                            android:background="@color/gray_f5f5f5"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="正在上传  (0)"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_edit_uploading"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="编辑"
+                            android:visibility="gone"
+                            android:background="@null"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_selectall_uploading"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="全选"
+                            android:visibility="gone"
+                            android:background="@null"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/btn_edit_uploading"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_allUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/nas_loadbuttonbg"
+                        android:text="全部开始上传"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"
+                        />
+
+                    <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                        android:id="@+id/lv_upload"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                        android:id="@+id/lv_upload_waiting"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:background="@color/gray_f5f5f5"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_finish_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_f5f5f5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="上传成功  (0)"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_edit_uploaded"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="编辑"
+                        android:visibility="gone"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_selectall_uploaded"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="全选"
+                        android:visibility="gone"
+                        android:background="@null"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/btn_edit_uploaded"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        />
+
+                </RelativeLayout>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_finish_upload"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_empty_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="这里是空的，快去上传文件吧~"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/black_424242"
+            />
+
+
+    </RelativeLayout>
+</layout>

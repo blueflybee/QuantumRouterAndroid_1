@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="2017/6/12"
+        android:textColor="@color/black_424242"
+        android:textSize="13sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_item_question"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_questionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="60dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="网关和App无法绑定/添加网关和App无法绑定网关和App无法绑定"
+            android:textColor="@color/black_424242"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_my_question_More"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:focusable="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/img_my_question_More"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+        </LinearLayout>
+
+        <!--   <ImageView
+               android:id="@+id/img_my_question_More"
+               android:focusable="true"
+               android:layout_width="6dp"
+               android:layout_height="10dp"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="20dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/ic_navigate_next_black_48dp"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/gray"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

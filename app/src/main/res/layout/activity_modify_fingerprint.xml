@@ -1,0 +1,104 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:maxLength="16"
+                android:inputType="text"
+                android:id="@+id/et_fingerprint_name"
+                style="@style/LoginInputStyle"
+                android:hint="请输入指纹名称"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/et_fingerprint_name"
+                android:layout_marginTop="12.5dp"/>
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gl_finger_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:columnCount="3">
+
+            <TextView
+                android:id="@+id/tv_one"
+                style="@style/NormalTextViewStyle"
+                android:background="@drawable/fingerprint_button"
+                android:text="右拇指"
+                android:textColor="@color/blue_1976d2"/>
+
+
+            <TextView
+                android:id="@+id/tv_two"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/fingerprint_button"
+                android:text="左拇指"
+                android:textColor="@color/blue_1976d2"/>
+            　
+
+            <TextView
+                android:id="@+id/tv_three"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/fingerprint_button"
+                android:text="右食指"
+                android:textColor="@color/blue_1976d2"/>
+
+            <TextView
+                android:id="@+id/tv_four"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/fingerprint_button"
+                android:text="左食指"
+                android:textColor="@color/blue_1976d2"/>
+
+            <TextView
+                android:id="@+id/tv_five"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/fingerprint_button"
+                android:text="右中指"
+                android:textColor="@color/blue_1976d2"/>
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btn_delete_fp"
+            style="@style/RedStrokeButtonStyle"
+            android:layout_marginTop="160dp"
+            android:onClick="deleteFp"
+            android:text="删除指纹"/>
+
+        <TextView
+            android:id="@+id/tv_lock_tips"
+            style="@style/NormalTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/gray_999999"
+            android:gravity="start"
+            android:text="为了您的安全，删除指纹前需要先触碰门锁背后的按钮开启配置状态。"
+            android:textSize="14sp"/>
+
+
+
+    </LinearLayout>
+</layout>

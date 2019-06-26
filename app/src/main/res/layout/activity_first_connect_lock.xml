@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/pic2"/>
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:text="配对门锁后，当收到门铃时，系统会\n提供快捷的远程开门方式"
+                android:lineSpacingExtra="3dp"
+                android:textSize="16sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="90dp"
+                android:onClick="onFirstConnectLock"
+                android:text="开始配对"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:onClick="onAfterConnectLockClick"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="以后再说"
+                    android:textColor="@color/gray_666666"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

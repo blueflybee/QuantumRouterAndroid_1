@@ -1,0 +1,233 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:id="@+id/ll_wifi_offline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/title_bar"
+            android:visibility="gone"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/blue_2196f3"
+                android:orientation="vertical"
+                >
+
+                <!--  <include layout="@layout/app_titlebar"
+                           android:background="@color/blue_2196f3"
+                      />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/noun_onoff"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="添加时段，定时开关无线网络"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+
+            <include
+                layout="@layout/include_layout_offline"
+                />
+        </LinearLayout>
+
+        <com.fernandocejas.android10.sample.presentation.view.component.ScrollViewForMove
+            android:id="@+id/scrollView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bar"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/blue_2196f3"
+                    android:orientation="vertical"
+                    >
+
+                  <!--  <include layout="@layout/app_titlebar"
+                             android:background="@color/blue_2196f3"
+                        />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp"
+                        >
+                        <ImageView
+                            android:id="@+id/img_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/noun_onoff"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_guest_wifi_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="添加时段，定时开关无线网络"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_wifi_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center_vertical"
+                            android:text="无线WIFI网络"
+                            android:textColor="@color/black_424242"
+                            android:textSize="15sp"/>
+
+                      <!--  <ImageView
+                            android:id="@+id/img_wifi_switch"
+                            android:layout_width="40dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/ic_off"
+                            />-->
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/switch_wifi_btn"
+                            style="@style/SwitchStyle_1"
+                            />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_wifi_time_interval"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_wifi_time"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="25dp"
+                            android:text="WIFI自动关闭时段"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="14sp"/>
+
+                        <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                            android:id="@+id/lv_timeInterval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@null"
+                            android:scrollbars="none"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_add_time_interval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/ll_wifi_time_interval"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="center_vertical"
+                            android:text="添加时段"
+                            android:textColor="@color/black_424242"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/img_more"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/ic_navigate_next_black_48dp"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.fernandocejas.android10.sample.presentation.view.component.ScrollViewForMove>
+
+
+<!--        <Button
+            android:id="@+id/btn_finish_wifi"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="完成"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/btn_blue_2196f3_selector"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            />-->
+
+    </RelativeLayout>
+
+
+</layout>

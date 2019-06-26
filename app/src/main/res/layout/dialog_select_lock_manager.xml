@@ -1,0 +1,86 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:background="@color/gray_fafafa">
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_error_black"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:text="请选择管理员后解绑门锁"
+            android:textSize="16sp"/>
+        <!--<in.srain.cube.views.ptr.PtrClassicFrameLayout-->
+        <!--android:id="@+id/ptr_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/title_bar"-->
+        <!--cube_ptr:ptr_duration_to_close_header="800"-->
+        <!--cube_ptr:ptr_keep_header_when_refresh="true"-->
+        <!--cube_ptr:ptr_pull_to_fresh="false"-->
+        <!--cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"-->
+        <!--cube_ptr:ptr_resistance="1.8">-->
+
+        <ListView
+            android:id="@+id/lv_user_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title"
+            android:layout_above="@+id/ll_bottom_buttons"
+            android:layout_marginTop="16dp"
+            android:divider="@null"
+            tools:listitem="@layout/item_select_lock_manager"
+            />
+
+        <!--</in.srain.cube.views.ptr.PtrClassicFrameLayout>-->
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="取消"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="解绑"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

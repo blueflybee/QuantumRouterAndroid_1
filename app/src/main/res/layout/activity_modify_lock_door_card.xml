@@ -1,0 +1,55 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/et_modify_property"
+                style="@style/LoginInputStyle"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:inputType="text"
+                android:maxLength="16"
+                android:textColor="@color/black_424242"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                style="@style/ClearTextIvStyle"
+                android:onClick="clearText"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/iv_clear"
+                android:layout_marginTop="12.5dp"
+                android:background="@color/gray_f3f3f3"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_delete_door_card"
+            style="@style/RedStrokeButtonStyle"
+            android:layout_marginTop="138dp"
+            android:onClick="deleteDoorCard"
+            android:text="删除门卡"/>
+
+        <TextView
+            android:id="@+id/tv_lock_tips"
+            style="@style/NormalTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/gray_999999"
+            android:gravity="start"
+            android:text="为了您的安全，删除门卡前需要先触碰门锁背后的按钮开启配置状态。"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</layout>

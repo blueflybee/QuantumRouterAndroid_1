@@ -1,0 +1,122 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <import type="com.fernandocejas.android10.sample.data.constant.PrefConstant"/>
+
+        <variable
+            name="sp"
+            type="com.blankj.utilcode.util.SPUtils"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_iv_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar">
+
+            <TextView
+                android:id="@+id/tv_title_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="完善资料，能让家人能更快认出你"
+                android:textColor="@color/black_424242"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/HeadIvStyle"
+                android:layout_below="@+id/tv_title_tips"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="60dp"
+                android:onClick="modifyHeadImage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp"
+                android:text="点击上传头像"
+                android:textColor="@color/black_424242"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_1"
+            style="@style/LineHorizontalStyle"
+            android:layout_below="@+id/rl_iv_head"
+            android:background="@color/gray_f3f3f3"/>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_1"
+            android:background="@color/white"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/tv_nickName"
+                style="@style/MineFeedbackTvStyle"
+                android:text="用户昵称"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@+id/tv_nickName">
+
+                <EditText
+                    android:id="@+id/et_nickName"
+                    style="@style/NickNameInputStyle"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:textColor="@color/black_424242"/>
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    style="@style/ClearTextIvStyle"
+                    android:onClick="clearNickName"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_2"
+            style="@style/LineHorizontalStyle"
+            android:layout_below="@+id/rl_nickName"
+            android:background="@color/gray_f3f3f3"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/BlueButtonStyle"
+            android:layout_below="@+id/line_2"
+            android:layout_marginTop="40dp"
+            android:onClick="save"
+            android:text="保存"/>
+
+        <TextView
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/btn_save"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:onClick="skip"
+            android:text="以后再填 >"
+            android:textColor="@color/blue_2196f3"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+</layout>

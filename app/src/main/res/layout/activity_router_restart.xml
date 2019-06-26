@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.GetTimerTaskResponse"/>
+
+        <import type="android.view.View"/>
+        <import type="com.fernandocejas.android10.sample.domain.constant.ModelConstant"/>
+
+        <variable
+            name="rsp"
+            type="GetTimerTaskResponse"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_restart_switch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="定时重启"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_restart"
+                style="@style/SwitchStyle_1"
+                android:checked="@{rsp.enable == 1 ? true : false }"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_restart_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_restart_switch"
+            android:background="@drawable/view_white_selector"
+            android:onClick="pickTime"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="重启时间"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/TextViewStyle_1"
+                android:layout_toStartOf="@+id/iv_arrow"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_repeat_cycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_restart_time"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+
+                android:id="@+id/tv_time_title"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginLeft="25dp"
+                android:text="重复周期"/>
+
+            <GridLayout
+                android:id="@+id/gl_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:columnCount="4"
+                android:foregroundGravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_one"
+                    style="@style/CheckBoxSytle_1"
+                    android:checked="@{rsp.day.contains(ModelConstant.MON)? true : false }"
+                    android:text="周一"/>
+
+
+                <CheckBox
+                    android:id="@+id/cb_two"
+                    style="@style/CheckBoxSytle_1"
+                    android:layout_marginStart="25dp"
+                    android:checked="@{rsp.day.contains(ModelConstant.TUE)? true : false }"
+                    android:text="周二"/>
+                　
+
+                <CheckBox
+                    android:id="@+id/cb_three"
+                    style="@style/CheckBoxSytle_1"
+                    android:layout_marginStart="25dp"
+                    android:checked="@{rsp.day.contains(ModelConstant.WED)? true : false }"
+                    android:text="周三"/>
+
+                <CheckBox
+                    android:id="@+id/cb_four"
+                    style="@style/CheckBoxSytle_1"
+                    android:layout_marginStart="25dp"
+                    android:checked="@{rsp.day.contains(ModelConstant.THU)? true : false }"
+                    android:text="周四"/>
+
+                <CheckBox
+                    android:id="@+id/cb_five"
+                    style="@style/CheckBoxSytle_1"
+                    android:checked="@{rsp.day.contains(ModelConstant.FRI)? true : false }"
+                    android:text="周五"/>
+
+                <CheckBox
+                    android:id="@+id/cb_six"
+                    style="@style/CheckBoxSytle_1"
+                    android:layout_marginStart="25dp"
+                    android:checked="@{rsp.day.contains(ModelConstant.SAT)? true : false }"
+                    android:text="周六"/>
+
+                <CheckBox
+                    android:id="@+id/cb_zero"
+                    style="@style/CheckBoxSytle_1"
+                    android:checked="@{rsp.day.contains(ModelConstant.SUN)? true : false }"
+                    android:layout_marginStart="25dp"
+                    android:text="周日"/>
+
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

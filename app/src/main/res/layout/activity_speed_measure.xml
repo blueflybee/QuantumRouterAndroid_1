@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_2196f3"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <com.fernandocejas.android10.sample.presentation.view.device.router.tools.bandspeedmeasure.InstrumentView
+                android:layout_width="wrap_content"
+                android:layout_height="325dp"
+                android:id="@+id/instrumentView"
+                />
+
+            <TextView
+                android:id="@+id/tv_test_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:lineSpacingExtra="3dp"
+                android:gravity="center"
+                android:text="测速进行中…"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="宽带测速网关自动完成\n不会消耗手机流量"
+                />
+
+            <Button
+                android:id="@+id/btn_measureSpeed"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:text="一键测速"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="18sp"
+                android:background="@drawable/btn_selector"
+                />
+
+            <Button
+                android:id="@+id/btn_historySpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测速历史记录"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white_bbdefb"
+                android:textSize="13sp"
+                android:background="@null"
+                />
+            <SeekBar
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

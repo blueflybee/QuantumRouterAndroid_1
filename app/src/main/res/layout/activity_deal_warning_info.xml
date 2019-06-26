@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#b76ed9"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="12dp"
+                android:text="当前门锁x有被撬风险"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ingore"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginRight="1.5dp"
+                    android:layout_weight="1"
+                    android:background="#6ed9d9"
+                    android:onClick="confirm"
+                    android:text="忽略"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="1.5dp"
+                    android:layout_weight="1"
+                    android:background="#6ed9d9"
+                    android:onClick="confirm"
+                    android:text="查看详情"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

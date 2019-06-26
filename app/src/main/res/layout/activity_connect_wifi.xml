@@ -1,0 +1,126 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="设备适配暂只支持"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="2.4G网络"
+                    android:textColor="@color/blue_2196f3"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                >
+
+                <EditText
+                    android:id="@+id/et_wifi_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_wifi"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入Wi-Fi名称"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black_1e1e1e"
+                    android:textColorHint="@color/gray_cdcdcd"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="2.4G"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="15sp"
+                    />
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_f3f3f3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    style="@style/PwdInputStyle"
+                    android:layout_toLeftOf="@+id/iv_show_pwd"
+                    android:hint="请输入Wi-Fi密码"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    />
+
+                <CheckBox
+                    android:id="@+id/iv_show_pwd"
+                    style="@style/ShowPwdCheckBoxStyle"
+                    android:onClick="changeInputType"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_f3f3f3"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_config"
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="40dp"
+                android:onClick="configWifi"
+                android:text="配置Wi-Fi"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

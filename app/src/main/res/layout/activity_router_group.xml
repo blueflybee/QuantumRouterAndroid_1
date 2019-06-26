@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ListView
+            android:id="@+id/lv_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rv_add_new_group"
+            android:layout_below="@+id/title_bar"
+            android:divider="@color/gray_f3f3f3"
+            android:dividerHeight="0.5dp"
+            tools:listitem="@layout/item_router_group_list">
+
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/rv_add_new_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:background="@color/gray_bdbdbd"
+                android:layout_height="0.5dp"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_setting_name"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:layout_marginLeft="25dp"
+                android:text="+ 新增分组"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:background="@color/gray_bdbdbd"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

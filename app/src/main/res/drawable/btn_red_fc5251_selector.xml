@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/red_fc5251" android:state_pressed="true"/>
+    <item android:drawable="@drawable/shape_rec_red_fc5251_stroke_btn"/>
+
+</selector>

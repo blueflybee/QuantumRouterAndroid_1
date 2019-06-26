@@ -1,0 +1,96 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_below="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_vpn_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:focusable="true"
+                        android:text="VPN"/>
+
+                    <ImageView
+                        android:id="@+id/img_switch_vpn"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+
+                </RelativeLayout>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_vpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_vpn_switch"
+                    android:background="@color/white"
+                    android:divider="@null"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    >
+                </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_vpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lv_vpn"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_white_selector"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="添加VPN设备"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/TextViewStyle_1"
+                        android:layout_toStartOf="@+id/iv_arrow"
+                        android:text=""/>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginRight="20dp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</layout>

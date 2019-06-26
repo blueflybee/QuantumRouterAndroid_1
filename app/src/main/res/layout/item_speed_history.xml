@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_speed_history_date"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/gray_bdbdbd"
+            android:textSize="15sp"
+            android:text="2017-10-29" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="135dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:textColor="@color/black_424242"
+            android:textSize="15sp"
+            android:text="网络异常21213321321312312123213213213212132312312312" />
+
+        <View
+            android:id="@+id/view_speed"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

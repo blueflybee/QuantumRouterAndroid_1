@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_camera_position"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onCameraLocationClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="摄像机摆放方式"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_time_zone_set1"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_camera_position"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_arrow_time_zone_set1"
+                android:textSize="14sp"
+                android:textColor="@color/gray_999999"
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_restart_cat_eye"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_camera_position"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onRestartCameraClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="重启摄像机"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_time_zone_set"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_restart_cat_eye"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onResetCameraClick"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="重置摄像机"/>
+
+            <ImageView
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

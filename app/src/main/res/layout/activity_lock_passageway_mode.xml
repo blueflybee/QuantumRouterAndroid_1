@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="通道模式"/>
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="8dp"
+                    android:text="开启后门锁将保持开启状态"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_passageway"
+                style="@style/SwitchStyle_1"
+                android:checked="false"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

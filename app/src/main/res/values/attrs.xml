@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <attr name="civ_fill_color" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- 自定义圆形进度条，属性设置 -->
+    <declare-styleable name="CustomCircleProgress">
+        <!-- 默认圆的颜色 -->
+        <attr name="progress_default_color" format="color"/>
+        <!-- 进度圆的颜色 -->
+        <attr name="progress_reached_color" format="color"/>
+        <!-- 进度条的高度 -->
+        <attr name="progress_reached_height" format="dimension"/>
+        <!-- 无进度时(默认圆)的边框高 -->
+        <attr name="progress_default_height" format="dimension"/>
+        <!-- 圆的半径 -->
+        <attr name="circle_radius" format="dimension"/>
+    </declare-styleable>
+
+    <!--自定义时间刻度选择器-->
+    <declare-styleable name="RulerView">
+        <!--最大刻度的颜色-->
+        <attr name="mMaxScaleColor" format="color"/>
+        <!--中间刻度的颜色-->
+        <attr name="mMidScaleColor" format="color"/>
+        <!--最小刻度的颜色-->
+        <attr name="mMinScaleColor" format="color"/>
+        <!--底线的颜色-->
+        <attr name="mBottomLineColor" format="color"/>
+        <!--最大刻度的宽度-->
+        <attr name="mMaxScaleWidth" format="dimension"/>
+        <!--中间刻度的宽度-->
+        <attr name="mMidScaleWidth" format="dimension"/>
+        <!--最小刻度的宽度-->
+        <attr name="mMinScaleWidth" format="dimension"/>
+        <!--底线的宽度-->
+        <attr name="mBottomLineWidth" format="dimension"/>
+        <!--最大刻度的高度占控件的高度比例-->
+        <attr name="mMaxScaleHeightRatio" format="float"/>
+        <!--中间刻度的高度占控件的高度比例-->
+        <attr name="mMidScaleHeightRatio" format="float"/>
+        <!--最小刻度的高度占控件的高度比例-->
+        <attr name="mMinScaleHeightRatio" format="float"/>
+        <!--是否显示刻度值-->
+        <attr name="isShowScaleValue" format="boolean"/>
+        <!--是否刻度渐变 包括刻度值和刻度线及下面的线-->
+        <attr name="isScaleGradient" format="boolean"/>
+        <!--刻度值颜色-->
+        <attr name="mScaleValueColor" format="color"/>
+        <!--刻度值文字大小-->
+        <attr name="mScaleValueSize" format="dimension"/>
+        <!--刻度值间隔-->
+        <attr name="mScaleSpace" format="dimension"/>
+        <!-- 当前值-->
+        <attr name="mCurrentValue" format="integer"/>
+        <!--最大值-->
+        <attr name="mMaxValue" format="integer"/>
+        <!--最小值-->
+        <attr name="mMinValue" format="integer"/>
+        <!--刻度基数-->
+        <attr name="mScaleBase" format="integer"/>
+        <!--中间图标-->
+        <attr name="mMiddleImg" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="custume_ripple_imageview">
+        <attr name="show_spacing_time" format="integer"></attr>
+        <attr name="imageViewWidth" format="dimension"></attr>
+        <attr name="imageViewHeigth" format="dimension"></attr>
+    </declare-styleable>
+</resources>

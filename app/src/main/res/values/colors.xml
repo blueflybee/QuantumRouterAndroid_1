@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#39c0ff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="blue">#0000FF</color>
+    <color name="orange">#FF6600</color>
+    <color name="white_transparent">#00FFFFFF</color>
+    <color name="gray_bg">#F7F7F7</color>
+    <color name="gray_f1f1f1">#F1F1F1</color>
+    <color name="hint_color">#B4B4B4</color>
+    <color name="common_green">#1ea872</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="text1">#2196f3</color>21212121
+    <color name="text2">#333333</color>
+
+    <!-- 黄色 -->
+    <color name="yellow">#FFFF00</color>
+
+    <!-- 银灰 -->
+    <color name="hint_silver_gray">#9B9B9B</color>
+    <!-- 灰黑 -->
+    <color name="dark_gray">#5C5C5C</color>
+
+    <color name="label_color">#AAAAAA</color>
+    <color name="transparent">#00000000</color>
+
+    <!--basic template-->
+    <color name="divider_line_color">#9B9B9B</color>
+
+    <color name="common_text_black">#303030</color>
+    <color name="tab_line_bg">#0892F5</color>
+
+    <color name="tab_tv_normal">#9B9B9B</color>
+    <color name="tab_tv_selected">#0892F5</color>
+
+    <color name="gray_999999">#999999</color>
+    <color name="gray_d9d9d9">#d9d9d9</color>
+    <color name="gray_555555">#999999</color>
+    <color name="gray_979797">#979797</color>
+    <color name="gray_eaeaea">#eaeaea</color>
+    <color name="gray_bdbdbd">#bdbdbd</color>
+    <color name="gray_fafafa">#fafafa</color>
+
+    <color name="gray_dddddd">#dddddd</color>
+    <color name="gray_d0d3da">#d0d3da</color>
+    <color name="black_424242">#424242</color>
+    <color name="black_333333">#333333</color>
+    <color name="gray_cdcdcd">#cdcdcd</color>
+    <color name="gray_f3f3f3">#f3f3f3</color>
+    <color name="gray_f5f5f5">#f5f5f5</color>
+    <color name="gray_757575">#757575</color>
+    <color name="black_1e1e1e">#1e1e1e</color>
+    <color name="blue_2196f3">#2196f3</color>
+    <color name="blue_6aa9f1">#6aa9f1</color>
+    <color name="blue_2396f3">#2396f3</color>
+    <color name="blue_48b6f4">#48b6f4</color>
+    <color name="blue_2b98f0">#2b98f0</color>
+    <color name="blue_2196f3_95">#0c2196f3</color>
+    <color name="white_bbdefb">#bbdefb</color>
+    <color name="gray_666666">#666666</color>
+    <color name="green_48b04b">#48b04b</color>
+    <color name="red_ff504c">#ff504c</color>
+    <color name="red_ff4e46">#ff4e46</color>
+    <color name="red_fc5251">#fc5251</color>
+    <color name="red_fc7b8a">#fc7b8a</color>
+    <color name="red_ff68a4">#ff68a4</color>
+    <color name="blue_1194f6">#1194f6</color>
+    <color name="gray_888888">#888888</color>
+    <color name="blue_1976d2">#1976d2</color>
+    <color name="blue_409cf9">#409cf9</color>
+    <color name="blue_3f88f5">#3f88f5</color>
+    <color name="blue_2198F4">#2198F4</color>
+    <color name="blue_ff49b5f4">#ff49b5f4</color>
+    <color name="blue_c6e2ff">#C6E2FF</color>
+    <color name="alpha_50">#80000000</color>
+
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+</resources>

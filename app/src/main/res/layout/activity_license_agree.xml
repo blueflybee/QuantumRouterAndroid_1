@@ -1,0 +1,62 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_search_device_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="欢迎使用量子网关"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_below="@+id/tv_title"
+                android:id="@+id/iv_router_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="66dp"
+                android:background="@drawable/b_router"/>
+
+
+            <TextView
+                android:id="@+id/tv_license"
+                style="@style/NormalTextViewStyle"
+                android:layout_below="@+id/iv_router_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="96dp"
+                android:text="请先阅读《用户许可使用协议》后选择是否要继续"
+                android:textSize="14sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_below="@+id/tv_license"
+                android:layout_marginTop="20dp"
+                android:onClick="agree"
+                android:text="同意，继续"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

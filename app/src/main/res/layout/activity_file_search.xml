@@ -1,0 +1,159 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <Button
+                android:id="@+id/btn_search_cancle"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/black_424242"
+                android:textSize="14sp"
+                />
+            <RelativeLayout
+                android:id="@+id/rl_clear"
+                android:layout_toLeftOf="@+id/btn_search_cancle"
+                android:layout_width="30dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_clear_search"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/ic_error"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/rl_clear"
+                android:background="@drawable/nas_searchbg"
+                android:drawableLeft="@drawable/nas_search"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black_424242"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:id="@+id/ll_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="历史搜索"
+                            android:textColor="@color/black_424242"
+                            android:textSize="15sp"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_deleteHis"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="11dp"
+                                android:layout_height="13dp"
+                                android:background="@drawable/nas_hisdelete"
+                                />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <com.fernandocejas.android10.sample.presentation.view.device.intelDev.FlowLayout
+                        android:id="@+id/fl_searchhis_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ExpandableListViewForScrollView
+                    android:id="@+id/lv_searchFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:visibility="gone"
+                    android:layout_below="@id/ll_history"
+                    >
+                </com.fernandocejas.android10.sample.presentation.view.component.ExpandableListViewForScrollView>
+
+                <TextView
+                    android:id="@+id/tv_empty"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="未找到结果"
+                    android:textSize="16sp"
+                    android:layout_marginTop="260dp"
+                    android:textColor="@color/black_424242"
+                    android:gravity="center"
+                    android:layout_below="@id/lv_searchFile"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,171 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<data>-->
+
+    <!--<import type="com.qtec.router.model.rsp.SearchIntelDevResponse"/>-->
+
+    <!--<variable-->
+    <!--name="rsp"-->
+    <!--type="SearchIntelDevResponse"/>-->
+    <!--</data>-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_add_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector">
+
+                <TextView
+                    style="@style/MineFeedbackTvStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:drawableStart="@drawable/noun_286941_f"
+                    android:text="添加指纹"/>
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/iv_arrow"
+                    android:ellipsize="end"
+                    android:maxEms="20"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginRight="20dp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:background="@color/gray_bdbdbd"
+                    />
+
+            </RelativeLayout>
+
+
+            <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                android:id="@+id/lv_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                tools:listitem="@layout/item_secure_manage_fingerprint">
+            </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_add_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector">
+
+                <TextView
+                    style="@style/MineFeedbackTvStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:drawableStart="@drawable/noun_286941_a"
+                    android:text="添加密码"/>
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/iv_arrow_1"
+                    android:ellipsize="end"
+                    android:maxEms="20"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_1"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginRight="20dp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:background="@color/gray_bdbdbd"
+                    />
+
+            </RelativeLayout>
+
+
+            <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                android:id="@+id/lv_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                tools:listitem="@layout/item_secure_manage_fingerprint">
+            </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_add_door_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector">
+
+                <TextView
+                    style="@style/MineFeedbackTvStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:drawableStart="@drawable/ic_add_card"
+                    android:text="添加门卡"/>
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/iv_arrow_2"
+                    android:ellipsize="end"
+                    android:maxEms="20"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_2"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginRight="20dp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:background="@color/gray_bdbdbd"
+                    />
+
+            </RelativeLayout>
+
+
+            <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                android:id="@+id/lv_door_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                tools:listitem="@layout/item_secure_manage_fingerprint">
+            </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

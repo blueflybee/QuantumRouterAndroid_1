@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        >
+
+        <include
+            layout="@layout/app_titlebar"/>
+
+        <ListView
+            android:id="@+id/lv_my_advice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_bottom1"
+            android:layout_below="@id/title_bar"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:scrollbars="none"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_cdcdcd">
+
+            <Button
+                android:id="@+id/btn_send1"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_sendmessage1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/btn_send1"
+                android:background="@color/white"
+                android:hint="请输入您的反馈"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black_424242"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

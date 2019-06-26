@@ -1,0 +1,35 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        >
+
+        <include layout="@layout/app_titlebar"/>
+
+        <Button
+            android:id="@+id/btn_upload_file"
+            style="@style/BlueButtonStyle"
+            android:layout_alignParentBottom="true"
+            android:text="上传(0)"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <ListView
+            android:id="@+id/lv_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_upload_file"
+            android:divider="@null"
+            android:layout_below="@+id/title_bar"
+            >
+        </ListView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,154 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/ll_common_tool_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="4dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/blueblueblue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="首页工具"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:padding="2dp"
+                    android:text="编辑"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:padding="2dp"
+                    android:text="完成"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/tv_finish"
+                    android:padding="2dp"
+                    android:text="取消"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <!--<com.fernandocejas.android10.sample.presentation.view.component.SodukuGridView-->
+            <!--android:id="@+id/gv_tools"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/ll_common_tool_title"-->
+            <!--android:gravity="center"-->
+            <!--android:horizontalSpacing="10dp"-->
+            <!--android:listSelector="@color/white_transparent"-->
+            <!--android:numColumns="4"-->
+            <!--android:padding="10dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:verticalSpacing="10dp"/>-->
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_centerInParent="true"
+                android:id="@+id/recyv_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_common_tool_title"
+                android:overScrollMode="never"
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_all_tool_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyv_tools"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="4dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/blueblueblue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="全部工具"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+            </LinearLayout>
+
+            <!--<com.fernandocejas.android10.sample.presentation.view.component.SodukuGridView-->
+            <!--android:id="@+id/gv_tools_all"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/ll_all_tool_title"-->
+            <!--android:gravity="center"-->
+            <!--android:horizontalSpacing="10dp"-->
+            <!--android:listSelector="@color/white_transparent"-->
+            <!--android:numColumns="4"-->
+            <!--android:padding="10dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:verticalSpacing="10dp"/>-->
+            <android.support.v7.widget.RecyclerView
+                android:layout_centerInParent="true"
+                android:id="@+id/recyv_tools_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_all_tool_title"
+                android:overScrollMode="never"
+                android:padding="10dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</layout>

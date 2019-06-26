@@ -1,0 +1,40 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.fernandocejas.android10.sample.presentation.view.device.router.tools.data.RouterTool"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="routerTool"
+            type="RouterTool"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_dev_frag_router"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_setting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_icon"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black_333333"
+            android:layout_centerHorizontal="true"
+            android:text="@{routerTool.name}"/>
+
+
+    </RelativeLayout>
+
+</layout>

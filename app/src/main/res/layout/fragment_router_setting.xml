@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dddddd"
+            android:orientation="vertical">
+
+            <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                android:id="@+id/list_router_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@null"
+                tools:listitem="@layout/item_router_setting">
+            </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_router_setting"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_restore_settings"
+                    style="@style/WidthMatchParentBtn"
+                    android:text="恢复出厂设置"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"/>
+
+                <Button
+                    android:id="@+id/btn_restart_router"
+                    style="@style/WidthMatchParentBtn"
+                    android:text="重启网关"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"/>
+
+                <Button
+                    android:id="@+id/btn_unbind_router"
+                    style="@style/WidthMatchParentBtn"
+                    android:text="解除绑定"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

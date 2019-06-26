@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_description"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_desc"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="描述"/>
+
+            <EditText
+                android:id="@+id/et_desc"
+                style="@style/NickNameInputStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:hint="必填"
+                android:maxLength="16"
+                android:textColor="@color/black_424242"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_group_protocol"
+            style="@style/TextViewStyleGroup"
+            android:layout_below="@+id/rl_description"
+            android:text="协议类型"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_l2tp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_group_protocol"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_l2tp"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="L2TP"/>
+
+            <ImageView
+                android:id="@+id/img_l2tp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_done_px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pptp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_l2tp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_pptp"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="PPTP"/>
+
+            <ImageView
+                android:id="@+id/img_pptp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_done_px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_connect_info"
+            style="@style/TextViewStyleGroup"
+            android:layout_below="@+id/rl_pptp"
+            android:text="链接信息"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_server_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_connect_info"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_server"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="服务器地址"/>
+
+            <EditText
+                android:id="@+id/et_server_address"
+                style="@style/NickNameInputStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tv_server"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:hint="必填"
+                android:gravity="right"
+                android:maxLength="128"
+                android:textColor="@color/black_424242"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_account"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_server_address"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="用户名"/>
+
+            <EditText
+                android:id="@+id/et_account"
+                style="@style/NickNameInputStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:hint="必填"
+                android:maxLength="32"
+                android:textColor="@color/black_424242"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_account"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="密码"/>
+
+            <EditText
+                android:id="@+id/et_5g_wifi_pwd"
+                style="@style/PwdInputStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLength="32"
+                android:textColor="@color/black_333333"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <CheckBox
+                android:id="@+id/cb_pwd"
+                android:visibility="gone"
+                style="@style/ShowPwdCheckBoxStyle_1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:onClick="showHidePwd"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_delete_vpn"
+            style="@style/RedStrokeButtonStyle"
+            android:layout_below="@id/rl_pwd"
+            android:layout_marginTop="70dp"
+            android:text="删除VPN"
+            />
+
+
+    </RelativeLayout>
+
+</layout>

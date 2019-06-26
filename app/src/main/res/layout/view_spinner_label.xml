@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fernandocejas.android10.sample.presentation.view.component.SpinnerLabelView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+  <TextView
+      android:id="@+id/name_tv"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="2.5"
+      android:textColor="@color/black"
+      android:text="证件号码"
+      />
+
+  <RelativeLayout
+      android:paddingRight="15dp"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      >
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:layout_marginRight="6dp"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_down_arrow"
+        />
+  </RelativeLayout>
+
+</com.fernandocejas.android10.sample.presentation.view.component.SpinnerLabelView>

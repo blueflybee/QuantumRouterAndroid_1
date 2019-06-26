@@ -1,0 +1,128 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/view_white_selector"
+            android:gravity="center_vertical"
+            android:onClick="showGateInfo">
+
+            <TextView
+                android:id="@+id/tv_info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_infor"
+                android:drawablePadding="15dp"
+                android:text="网关信息"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="16dp"
+                android:layout_toStartOf="@+id/iv_icon"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:background="@color/gray_bdbdbd"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_net_config"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/view_white_selector"
+            android:onClick="configNet"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_lite_net"
+                android:drawablePadding="15dp"
+                android:text="配置网络"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_net_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toStartOf="@+id/iv_net_config"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_net_config"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/view_white_selector"
+            android:drawableStart="@drawable/ic_autorenew_48px"
+            android:drawableEnd="@drawable/ic_navigate_next_black_48dp"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:onClick="update"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:text="固件升级"
+            android:textColor="@color/black_424242"
+            android:textSize="15sp"
+            android:visibility="visible"/>
+
+        <Button
+            style="@style/WidthMatchParentBtn"
+            android:layout_marginTop="5dp"
+            android:onClick="unbind"
+            android:text="解除绑定"/>
+    </LinearLayout>
+</layout>

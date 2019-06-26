@@ -1,0 +1,77 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="照片备份"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchBtn_picRestore"
+                style="@style/SwitchStyle_1"
+                android:layout_marginTop="12dp"
+                />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="后台自动备份"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchBtn_autoRestore"
+                style="@style/SwitchStyle_1"
+                android:layout_marginTop="12dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/gray_999999"
+            android:text="照片自动备份尽在Wi-Fi下进行，不会浪费手机流量"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            />
+
+
+    </LinearLayout>
+</layout>

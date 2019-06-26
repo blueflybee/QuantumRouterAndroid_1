@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="40dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="暂无异常状态\n您的门锁很安全~"
+        android:textColor="@color/black_424242"
+        android:textSize="16sp"
+        />
+
+</LinearLayout>

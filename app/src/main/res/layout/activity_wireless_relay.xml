@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_wireless_relay_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/title_bar"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="开启无线中继"/>
+
+                    <!--<android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_wireless_relay"
+                        style="@style/SwitchStyle_1"/>-->
+                    <ImageView
+                        android:id="@+id/img_wireless_relay"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+
+                    <View
+                        android:id="@+id/line_1"
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/gray_bdbdbd"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_connected"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_wireless_relay_switch"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goDetail"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_connect_name"
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:drawableLeft="@drawable/ic_wifi_black"
+                        android:drawablePadding="15dp"
+                        android:text="未知wifi"/>
+
+                    <TextView
+                        android:id="@+id/tv_connect_state"
+                        style="@style/TextViewStyle_1"
+                        android:layout_toStartOf="@+id/iv_arrow_detail"
+                        android:text="已连接"/>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_detail"
+                        style="@style/LargeClickableImageView"
+                        android:src="@drawable/ic_navigate_next_black_48dp"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="25dp"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_select_wifi"
+                    style="@style/TextViewStyleGroup"
+                    android:layout_below="@+id/rl_connected"
+                    android:text="选取网络..."
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_select_wifi"
+                    android:background="@color/white"
+                    android:divider="@null"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lv_wifi"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goOther"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="60dp"
+                        android:text="手动连接"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_auto_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rl_other"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="自动切换"/>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_auto"
+                        style="@style/SwitchStyle_1"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_auto_switch_tips"
+                    style="@style/TextViewStyle_1"
+                    android:layout_below="@+id/rl_auto_switch"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:text="开启后，如果中继断开，将自动切换可接入点并可能导致WIFI 断开，如果WIFI断开，请手动连接WIFI。"
+                    android:textSize="12sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_wireless_relay_tips"
+                    style="@style/TextViewStyle_1"
+                    android:layout_below="@+id/tv_auto_switch_tips"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:text="开启无线中继功能，可以接受并延伸上一个路由无线信号，扩大无线网络覆盖范围，同时网关的安全功能保持生效。"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,135 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+    <!--<import type="com.fernandocejas.android10.sample.presentation.data.User" />-->
+
+    <!--<variable-->
+    <!--name="user"-->
+    <!--type="User" />-->
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_sd"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="29sp"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_marginTop="65dp">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/LoginInputStyle"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:hint="手机号"/>
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    style="@style/ClearTextIvStyle"
+                    android:onClick="clearUsername"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_below="@id/iv_clear"
+                    android:layout_marginTop="12.5dp"
+                    android:background="@color/gray_f3f3f3"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_marginTop="40dp">
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    style="@style/PwdInputStyle"
+                    android:layout_toLeftOf="@+id/iv_show_pwd"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    />
+
+                <CheckBox
+                    android:id="@+id/iv_show_pwd"
+                    style="@style/ShowPwdCheckBoxStyle"
+                    android:onClick="changeInputType"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_below="@id/iv_show_pwd"
+                    android:layout_marginTop="12.5dp"
+                    android:background="@color/gray_f3f3f3"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/ErrTipTvStyle"
+                android:layout_marginTop="17dp"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="40dp"
+                android:onClick="login"
+                android:text="登录"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/LoginForgetPwdTvStyle"
+                    android:layout_marginLeft="4.5dp"
+                    android:onClick="forgetPwd"
+                    android:text="忘记密码？"/>
+
+                <TextView
+                    style="@style/LoginForgetPwdTvStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4.5dp"
+                    android:onClick="register"
+                    android:text="注册用户"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/btn_select_server"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_us"
+            android:onClick="selectServer"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/btn_select_lock_encryption_type"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/tab_safe_pressed"
+            android:onClick="selectEncryption"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</layout>

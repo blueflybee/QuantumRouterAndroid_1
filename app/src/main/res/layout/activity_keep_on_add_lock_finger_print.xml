@@ -1,0 +1,82 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:id="@+id/ll_first_add_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="120dp"
+                android:text="您当前只设置了一种开锁方式，是否继续添加指纹"
+                android:textSize="16sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="110dp"
+                android:onClick="addFingerprint"
+                android:text="添加指纹"/>
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="skipAddFingerprint"
+                android:text="以后再说"
+                android:textColor="@color/gray_666666"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_first_add_fingerprint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="120dp"
+                android:text="您当前只设置了一种开锁方式，是否继续添加密码"
+                android:textSize="16sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="110dp"
+                android:onClick="addPwd"
+                android:text="添加密码"/>
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="skipAddPwd"
+                android:text="以后再说"
+                android:textColor="@color/gray_666666"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

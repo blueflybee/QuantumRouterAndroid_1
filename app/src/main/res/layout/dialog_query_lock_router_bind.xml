@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_error_black"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/NormalTextViewStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text=""
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/NormalTextViewStyle"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/blue_2196f3"
+        android:layout_marginTop="23dp"
+        android:textSize="14sp"
+        android:text=""/>
+
+    <RelativeLayout
+        android:layout_below="@id/tv_content"
+        android:id="@+id/rl_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp">
+
+        <com.flybluebee.circleprogress.CircleProgress
+            android:id="@+id/progress_bind"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            custom:bgColor="@color/white"
+            custom:currProgress="0"
+            custom:foreEndColor="@color/blue_2396f3"
+            custom:isCircleCorner="false"
+            custom:foreStartColor="@color/blue_2396f3"
+            custom:maxProgress="360"
+            custom:progressInitialPosition="-90"
+            custom:progressWidth="6dp"
+            custom:useAnimation="true"
+            custom:useGradient="true"/>
+
+        <ImageView
+            android:id="@+id/iv_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bangding_router"/>
+    </RelativeLayout>
+
+</RelativeLayout>

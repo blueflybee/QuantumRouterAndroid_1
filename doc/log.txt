@@ -1,0 +1,33 @@
+12-04 10:49:43.570 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.pushData = CatEyePushData{title='猫眼设备电子猫眼(C403344247)门铃告警', body=DataBody{businessId='03', businessData=BusinessData{picturePath='/mnt/misc/20181204/A01104942.jpg', lockSerialNo='', videoPath='', routerSerialNo='', messageUniqueKey='eed1f3f0482c465aa1bc30be6514256c', occurTime='2018-12-04 10:49:42', catSerialNo='C403344247', messageCode='201'}}}
+12-04 10:49:43.581 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.catEye = GetDevTreeResponse{deviceName='电子猫眼', deviceVersion='null', deviceType='2', deviceSerialNo='C403344247', routerSerialNo='null', deviceModel='null', deviceShareNum='0', userRole='0', mac='null', deviceDetail='{"devicePass":"221248"}', deviceList=[]}
+12-04 10:49:43.581 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.catSerialNo = C403344247
+12-04 10:49:43.581 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.pwd = 221248
+12-04 10:49:43.584 14995-16467/com.qtec.router I/System.out: CatEyeDoorbellActivity.devPwd = 221248
+12-04 10:49:43.622 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:44.577 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:45.583 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:46.584 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:47.589 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:48.595 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:49.598 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:50.607 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:51.615 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:52.619 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:53.625 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:54.633 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:55.643 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:56.649 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:57.662 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:58.676 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:49:59.680 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:00.690 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:01.695 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:02.701 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:03.717 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:04.729 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:05.735 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:06.740 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+12-04 10:50:07.742 14995-14995/com.qtec.router I/System.out: CatEyeDoorbellActivity.onHandler default
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////

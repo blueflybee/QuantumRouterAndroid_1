@@ -1,0 +1,180 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.qtec.mapp.model.rsp.GetDevTreeResponse.DeviceBean"/>
+
+        <variable
+            name="device"
+            type="DeviceBean"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rv_dev_frag_router"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <com.fernandocejas.android10.sample.presentation.view.component.SodukuGridView
+                android:id="@+id/gv_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@color/white_transparent"
+                android:numColumns="4"
+                android:padding="16dp"
+                android:verticalSpacing="10dp"/>
+
+
+            <View
+                android:id="@+id/line_1"
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@+id/gv_tools"
+                android:layout_marginStart="25dp"
+                android:background="@color/gray_f3f3f3"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_key_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_1"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:text="密钥使用"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_alignParentRight="true"
+                    android:text="75%"
+                    android:textSize="12sp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_key_usage"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6.5dp"
+                    android:layout_below="@id/tv_progress"
+                    android:layout_marginTop="12dp"
+                    android:progressDrawable="@drawable/dev_key_progressbar_bg"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_height="5dp"
+                android:layout_below="@+id/rl_key_usage"
+                android:background="@color/blue_2196f3_95"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_dev_frag_inject_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_inject_key"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gray_999999"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_inject_key"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_width="155dp"
+                android:layout_below="@+id/tv_inject_key"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="载入量子密钥"/>
+
+            <TextView
+                android:id="@+id/tv_unbind_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_inject_key"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:textColor="@color/gray_cdcdcd"
+                android:textSize="12sp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_dev_frag_dev"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/iv_dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/indexic_doorlock"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@+id/iv_dev"
+                android:layout_toStartOf="@+id/tv_dev_status"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dev_name"
+                    style="@style/NormalTextViewStyle"
+                    android:text="@{device.deviceName}"
+                    android:textColor="@color/black_333333"/>
+
+                <TextView
+                    android:id="@+id/tv_dev_version"
+                    style="@style/NormalTextViewStyle"
+                    android:text="@{device.deviceName}"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dev_status"
+                style="@style/NormalTextViewStyle"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="10dp"
+                android:text="已上锁"
+                android:textColor="@color/gray_999999"
+                android:textSize="12sp"/>
+
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@color/gray_f3f3f3"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

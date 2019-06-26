@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:ellipsize="end"
+                android:maxWidth="235dp"
+                android:singleLine="true"
+                android:text="name"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/colorAccent"
+                    android:text="2017/09/17 22:22"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/tv_date"
+                    android:singleLine="true"
+                    android:text="12.1M"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:text="删"
+            android:layout_marginLeft="30dp"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/btn_rename"
+            android:text="重"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/btn_open"
+            android:text="开"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/btn_download"
+            android:text="载"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

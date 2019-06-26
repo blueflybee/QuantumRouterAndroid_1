@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">三点安全管家</string>
+
+    <!--注册-->
+    <string name="register_toast_number_empty">请输入注册帐号</string>
+    <string name="register_toast_id_code_success">验证码发送成功</string>
+    <string name="register_toast_id_code_emp">请输入验证码</string>
+    <string name="register_toast_pwd_emp">请输入密码</string>
+    <string name="register_toast_success">注册成功！</string>
+    <string name="register_toast_get_id_code_success">验证码已经发送到您的手机</string>
+
+    <!--重置密码-->
+    <string name="reset_pwd_toast_phone_emp">请输入用户名</string>
+    <string name="reset_pwd_toast_success">重置密码成功</string>
+
+    <!--我的-->
+    <string name="modify_pwd_toast_success">密码修改成功</string>
+
+    <!--通用类-->
+    <string name="confirm">确认</string>
+    <string name="commit">提交</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="back">返回</string>
+    <string name="login_invalid_dialog_msg">登录失效，请重新登录</string>
+
+    <!--异常信息-->
+    <string name="exception_message_no_connection">没有网络连接，请先连接网络</string>
+
+    <string name="user_name">username</string>
+    <string name="userPassword">userPassword</string>
+    <string name="log_in">Log in</string>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <!--智能设备-->
+    <string name="dev_detail_toast_unbind_success">设备解除绑定成功</string>
+    <string name="add_dev_verify_toast_add_success">设备绑定成功</string>
+
+    <!--网关-->
+    <string name="toast_add_router_pwd_input">请输入管理员密码</string>
+    <string name="add_router_verify_toast_add_success">网关绑定成功</string>
+    <string name="dev_modify_toast_dev_name_emp">请输入设备名称</string>
+
+    <!--电子猫眼-->
+    <string name="wait_config_tips">请长按主机\"home\"键\n直至设备发出等待配置提示音</string>
+
+    <string name="scan_text">请将产品二维码/邀请码放入方框内</string>
+
+    <string name="press_text">输入设备序列号</string>
+
+    <!--密钥-->
+    <string name="text_load_key_tips">我是量子密钥下载宣传小广告词，放在这里吸引人！
+        \n密钥同步后您的网络及家庭智能设备将享受量子安全</string>
+
+    <string name="filter_number_letter">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="filter_number">0123456789</string>
+    <string name="filter_number_point">0123456789.</string>
+    <string name="filter_no_space_no_chinese">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+
+    <string name="filter_wei_xin">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-</string>
+
+    <!--蓝牙门锁-->
+    <string name="text_update_lock_firmware_check">检查门锁版本需要您连接门锁蓝牙\n并保持网络通畅</string>
+    <string name="text_lock_ble_check_fail">蓝牙通信失败\n请确保蓝牙已经打开并靠近门锁</string>
+
+
+    <!--cat test-->
+    <string name="welcome_info">中维世纪手机播放SDK</string>
+    <string name="select_function">请选择要使用的功能</string>
+    <string name="function1">功能1：视频播放相关功能</string>
+    <string name="function2">功能2：无线配置（声波、智联）</string>
+    <string name="function3">功能3：广播相关功能</string>
+    <string name="function4">功能4：SDK版本信息</string>
+    <string name="function5">功能5：账号相关操作</string>
+    <string name="function6">功能6：设备相关功能</string>
+
+
+    <string name="connect_by_cloud">云视通连接</string>
+    <string name="connect_by_sov">流媒体连接</string>
+
+    <string name="connect_by_cloud_tips">云视通连接适用于：中维世纪小维事业部所有CloudSEE品牌的摄像机。</string>
+    <string name="connect_by_sov_tips">流媒体链接适用于：中维世纪小维事业部所有SOOVVI品牌的摄像机和所有智能猫眼设备。</string>
+
+    <string name="select_connect_way">请选择设备的连接方式</string>
+    <string name="connect_by_ip">IP连接视频</string>
+    <string name="connect_by_yst">云视通号码连接视频</string>
+    <string name="device_ip">设备IP</string>
+    <string name="device_port">设备端口</string>
+    <string name="device_yst_num">设备云视通号</string>
+    <string name="device_user">用户名</string>
+    <string name="device_pwd">密码</string>
+    <string name="device_channel_count">设备通道总数</string>
+    <string name="device_channel">连接第几通道(1开始)</string>
+    <string name="connect_normal">视频连接</string>
+    <string name="connect_ap">AP连接</string>
+
+    <string name="sov_add_dev_to_server">step1:将设备添加到服务器上</string>
+    <string name="sov_connect_video">step2:连接视频</string>
+    <string name="sov_connect_tips">demo的视频连接分两步，\n1:调用连接之前需要先执行步骤一，把要连接的设备添加到服务器上，调用成功后;\n2.可以执行第二部视频连接。
+    \n实际开发过程中用户获取到设备列表后立即调用step1，用户连视频的时候再去调用step2.\n3.摄像机需要添加摄像机的用户名密码，猫眼只输入设备号码即可，用户密码不用填写，忽略即可。</string>
+
+    <string name="wave_config">声波配置</string>
+    <string name="smart_config">智联路由配置</string>
+    <string name="wifi_name">Wi-Fi名称</string>
+    <string name="wifi_pwd">Wi-Fi密码</string>
+    <string name="wifi_mac">Mac地址</string>
+    <string name="repeat_counts">重复频次</string>
+    <string name="old_send">发送老声波(已弃用)</string>
+    <string name="new_send">发送新声波</string>
+    <string name="send">发送</string>
+    <string name="stop">停止</string>
+
+    <string name="select_broad_way">请选择广播的方式</string>
+    <string name="lan_broad_way">云视通协议:局域网广播</string>
+    <string name="net_broad_way">云视通协议:跨网段广播</string>
+    <string name="sov_lan_broad_way">流媒体协议:局域网广播</string>
+    <string name="broad_dev_count">广播到的设备列表</string>
+
+
+    <string name="connfailed_auth">用户名或密码错误 </string>
+    <string name="connfailed_channel_notopen">该通道不存在或未开放</string>
+    <string name="connfailed_type_invalid">连接类型无效</string>
+    <string name="connfailed_maxcount">超过设备最大连接数</string>
+    <string name="connfailed_timeout">连接超时</string>
+    <string name="connfailed_checkpass_timout">连接超时.</string>
+    <string name="connect_failed">连接失败</string>
+
+
+    <string name="connecting">连接中…</string>
+    <string name="resuming">恢复中…</string>
+    <string name="connect_ok">建立连接…</string>
+    <string name="i_ok">I帧OK</string>
+    <string name="o_ok">O帧OK</string>
+    <string name="error2">error2…</string>
+    <string name="error3">error3…</string>
+    <string name="error4">error4…</string>
+    <string name="error5">error5…</string>
+    <string name="error6">error6…</string>
+    <string name="error7">error7…</string>
+    <string name="error8">error8…</string>
+    <string name="error9">error9…</string>
+
+    <string name="closed">已断开</string>
+    <string name="abnormal_closed">连接异常断开</string>
+    <string name="overflow">超过最大连接数</string>
+    <string name="connecting_buffer1">正在缓冲1</string>
+    <string name="connecting_buffer2">正在缓冲2…</string>
+
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="next">下一步</string>
+    <string name="loading">加载中&#8230;</string>
+    <string name="login">登录</string>
+    <string name="logout">注销</string>
+    <string name="term">释放账号库资源</string>
+
+    <!--账号相关功能-->
+    <string name="account_title">请选择账号相关功能</string>
+    <string name="account_login">账号登陆</string>
+    <string name="account_register">账号注册</string>
+    <string name="account_register_nocode">账号注册(无验证码)</string>
+    <string name="account_reset">修改密码</string>
+    <string name="account_find">找回密码</string>
+    <string name="account_user">账号</string>
+    <string name="account_user_hint">请输入手机号/邮箱</string>
+    <string name="account_pwd">密码</string>
+    <string name="account_pwd_hint">请输入密码</string>
+    <string name="account_pwd_again_hint">请再次输入密码</string>
+    <string name="account_verity">获取验证码</string>
+    <string name="account_verity_hint">请输入验证码</string>
+    <string name="account_reset_old">请输入原密码</string>
+    <string name="account_reset_new">请输入新密码</string>
+    <string name="account_reset_newagain">再次输入新密码</string>
+    <string name="account_find_new">输入新设置的密码</string>
+    <string name="account_find_newagain">再次输入新设置的密码</string>
+
+    <!--报警相关功能-->
+    <string name="alarm_title">请选择设备相关功能</string>
+    <string name="alarm_add">添加设备</string>
+    <string name="alarm_change">设备修改</string>
+    <string name="alarm_delete">删除设备</string>
+    <string name="alarm_scan">查询设备列表</string>
+
+
+    <string name="basic_function">一：基本功能</string>
+    <string name="set_function">二：设备设置相关功能</string>
+
+    <string name="camera_function">二：摄像机独有的功能</string>
+    <string name="cat_function">三：猫眼独有的功能</string>
+
+    <string name="sound">声音</string>
+    <string name="single_call">单向对讲</string>
+    <string name="double_call">双向对讲</string>
+    <string name="record">录像</string>
+    <string name="change_stream">切换码流</string>
+    <string name="wifi_config">无线配置</string>
+    <string name="remote_play">远程回放</string>
+    <string name="modify_pwd">修改密码</string>
+    <string name="wifi_info">无线信息</string>
+    <string name="capture">抓拍</string>
+    <string name="ptz">云台</string>
+    <string name="press_to_talk">按住说话</string>
+    <string name="lose_to_stop">松开结束</string>
+    <string name="change_zoom">变焦</string>
+    <string name="change_focus">变倍</string>
+    <string name="device_set">设备设置</string>
+
+    <string name="function0_name">串口波特率设置</string>
+    <string name="function1_name">串口波特率获取</string>
+    <string name="function2_name">分辨率</string>
+    <string name="function3_name">wifi信道</string>
+    <string name="function4_name">ssid前缀</string>
+    <string name="function5_name">对比度亮度</string>
+    <string name="function6_name">旋转</string>
+    <string name="function7_name">VR</string>
+    <string name="function8_name">时间间隔</string>
+    <string name="function9_name">SD卡开关</string>
+    <string name="function10_name">wifi信号强度</string>
+    <string name="function11_name">时间同步</string>
+    <string name="function12_name">分贝报警</string>
+    <string name="function13_name">时间设置</string>
+    <string name="function14_name">SD卡状态</string>
+    <string name="function15_name">设备开始录像</string>
+    <string name="function16_name">设备停止录像</string>
+    <string name="function17_name">设备拍照</string>
+    <string name="function18_name">查询SD卡所有录像</string>
+    <string name="function19_name">查询SD卡所有照片</string>
+    <string name="function20_name">播放录像</string>
+    <string name="function21_name">下载文件</string>
+    <string name="function22_name">报警推送开关</string>
+    <string name="function23_name">移动侦测开关</string>
+    <string name="function24_name">移动侦测灵敏度</string>
+
+
+    <!-- RemotePlayBackActivity -->
+    <string name="search">检索</string>
+    <string name="start_time">开始时间</string>
+    <string name="save_path">保存路径</string>
+    <string name="video_load_failed">加载失败</string>
+    <string name="video_nodata_failed">没有数据</string>
+    <string name="video_normal">手动录像</string>
+    <string name="video_alarm">报警录像</string>
+    <string name="video_motion">移动检测</string>
+    <string name="video_time">定时录像</string>
+
+
+    <!-- 账号库问题的错误码 Start -->
+    <string name="lib_error_1">系统忙</string>
+    <string name="lib_error_2">连接出错</string>
+    <string name="lib_error_3">数据内容有错</string>
+    <string name="lib_error_4">请求命令出错</string>
+    <string name="lib_error_5">请求序号出错</string>
+    <string name="lib_error_6">IP鉴权失败</string>
+    <string name="lib_error_7">用户名密码错误</string>
+    <string name="lib_error_8">账号不存在</string>
+    <string name="lib_error_9">密码不正确</string>
+    <string name="lib_error_10">版本错误</string>
+    <string name="lib_error_11">请求跳转</string>
+    <string name="lib_error_20">系统异常</string>
+    <string name="lib_error_2000">操作失败，请重试</string>
+    <string name="lib_error_2001">执行超时</string>
+    <string name="lib_error_2002">当前无网络连接</string>
+    <!-- 账号库问题的错误码 End -->
+    <!-- 服务器返回的错误码 Start -->
+    <string name="server_error_1000">未知错误</string>
+    <string name="server_error_1001">解析错误</string>
+    <string name="server_error_1002">网络错误</string>
+    <string name="server_error_1003">协议出错</string>
+    <string name="server_error_1004">类型转换错误</string>
+    <!-- 服务器返回的错误码 End -->
+    <!-- 接口返回的错误码 Start -->
+    <!-- // 1.数据库或是其他基础操作失败 -->
+    <string name="web_error_101">数据库连接或操作失败</string>
+    <string name="web_error_102">参数传入不正确</string>
+    <string name="web_error_103">字符转换数字出错</string>
+    <string name="web_error_104">系统内部错误</string>
+    <string name="web_error_105">缓存异常</string>
+    <string name="web_error_106">远程连接异常</string>
+    <string name="web_error_107">返回结果为空</string>
+    <!-- // 2.设备管理出现的错误 -->
+    <string name="web_error_201">设备不存在</string>
+    <string name="web_error_202">用户没有绑定该设备</string>
+    <string name="web_error_203">设备已被绑定</string>
+    <string name="web_error_203_account">绑定账号:</string>
+    <string name="web_error_204">您已绑定该设备</string>
+    <string name="web_error_205">设备不在线</string>
+    <string name="web_error_206">设备用户名或密码错误</string>
+    <string name="web_error_209">邀请码已失效，请联系设备主人重新生成！</string>
+    <!-- // 3.报警出现的错误 -->
+    <string name="web_error_301">报警开关参数错误</string>
+    <!-- // 4.账号、验证码出现的错误 -->
+    <string name="web_error_401">账号已存在</string>
+    <string name="web_error_402">验证码不合法</string>
+    <string name="web_error_403">用户未登录或登录超时</string>
+    <string name="web_error_404">账号不存在</string>
+    <string name="web_error_405">老密码错误</string>
+    <string name="web_error_406">新密码错误</string>
+    <string name="web_error_407">参数为空</string>
+    <string name="web_error_408">参数不合法</string>
+    <string name="web_error_409">调用远程账号操作失败</string>
+    <string name="web_error_410">验证码发送失败</string>
+    <!-- // 5.其他出现的错误 -->
+    <string name="web_error_501">版本没有更新</string>
+    <string name="web_error_502">版本过高</string>
+
+    <!--路由器工具菜单-->
+    <string-array name="all_apply_name">
+        <item>当前状态</item>
+        <item>信号调节</item>
+        <item>智能宽带</item>
+        <item>一键体检</item>
+        <item>无线中继</item>
+        <item>防蹭网</item>
+        <item>宽带测速</item>
+        <item>特别关注</item>
+        <item>定时开关</item>
+        <item>访客WiFi</item>
+        <item>儿童关怀</item>
+        <item>安全存储</item>
+    </string-array>
+    <!--全部应用id-->
+    <string-array name="all_apply_id">
+        <item>100001</item>
+        <item>100002</item>
+        <item>100003</item>
+        <item>100004</item>
+        <item>100005</item>
+        <item>100006</item>
+        <item>100007</item>
+        <item>100008</item>
+        <item>100009</item>
+        <item>1000010</item>
+        <item>1000011</item>
+        <item>1000012</item>
+    </string-array>
+    <!--默认菜单列表-->
+    <string-array name="default_apply_name_s">
+        <item>当前状态</item>
+        <item>宽带测速</item>
+        <item>安全存储</item>
+    </string-array>
+    <!--默认菜单id-->
+    <string-array name="default_apply_id_s">
+        <item>100001</item>
+        <item>100007</item>
+        <item>1000012</item>
+    </string-array>
+
+
+    <!--lite-gateway esptouch-->
+    <string name="ssid_title">SSID: </string>
+    <string name="bssid_title">BSSID: </string>
+    <string name="password_title">Password: </string>
+    <string name="device_count_title">Device count: </string>
+    <string name="wifi_5g_message">Device dose not support 5G Wifi</string>
+</resources>

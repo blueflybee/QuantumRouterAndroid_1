@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_edit_samba_file"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@color/gray_f1f1f1"
+              android:orientation="vertical"
+    >
+    <com.fernandocejas.android10.sample.presentation.view.device.router.tools.safestore.utils.GridViewForExpandableListView
+        android:id="@+id/gv_item_samba_expandview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        >
+
+    </com.fernandocejas.android10.sample.presentation.view.device.router.tools.safestore.utils.GridViewForExpandableListView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_iv_head"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_below="@id/title_bar">
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/HeadIvStyle"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_iv_head"
+            android:background="@color/white"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_label_nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="用户名"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@+id/tv_label_nickName">
+
+                <TextView
+                    android:id="@+id/tv_nickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_nickName"
+            android:background="@color/white"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_label_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="手机号"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@+id/tv_label_phone">
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_logoff"
+            style="@style/WidthMatchParentBtn"
+            android:layout_below="@+id/rl_phone"
+            android:layout_marginTop="10dp"
+            android:onClick="logoff"
+            android:text="注销用户"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <TextView
+            android:id="@+id/tv_fp_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/gray_fafafa"
+            android:paddingBottom="10dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingTop="10dp"
+            android:text="指纹开锁"
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <ListView
+            android:id="@+id/fp_unlock_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fp_unlock"
+            android:divider="@color/gray_f3f3f3"
+            android:dividerHeight="0.5dp"/>
+
+        <TextView
+            android:id="@+id/tv_pwd_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fp_unlock_list"
+            android:background="@color/gray_fafafa"
+            android:paddingBottom="10dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingTop="10dp"
+            android:text="密码开锁"
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <ListView
+            android:id="@+id/pwd_unlock_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pwd_unlock"
+            android:divider="@color/gray_f3f3f3"
+            android:dividerHeight="0.5dp"/>
+
+        <TextView
+            android:id="@+id/tv_card_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pwd_unlock_list"
+            android:background="@color/gray_fafafa"
+            android:paddingBottom="10dp"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingTop="10dp"
+            android:text="门卡开锁"
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <ListView
+            android:id="@+id/card_unlock_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_card_unlock"
+            android:divider="@color/gray_f3f3f3"
+            android:dividerHeight="0.5dp"/>
+
+
+    </RelativeLayout>
+</layout>

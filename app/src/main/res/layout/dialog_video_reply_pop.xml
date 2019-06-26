@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_outer_layout"
+        android:layout_width="345dp"
+        android:layout_height="210dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="130dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/dialog_close"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_error"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="@color/black_424242"
+            android:textSize="16sp"
+            tools:text="213231231213"/>
+
+        <TextView
+            android:id="@+id/dialog_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/blue_2196f3"
+            android:textSize="14sp"
+            tools:text="2133212312133321"/>
+
+        <LinearLayout
+            android:id="@+id/ll_video_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:visibility="visible"
+            >
+
+            <com.blueflybee.uilibrary1.progressbar.VideoDownloadProgressBar
+                android:id="@+id/dialog_download_progress"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:backgroundColor="#E6E6E6"
+                app:foregroundColor="#2196F3"
+                app:height="16dp"
+                app:iconLeftMargin="3dp"
+                app:progressIcon="@drawable/pic_rocket"
+                app:radius="8dp"
+                app:textRightMargin="6dp"
+                app:width="260dp"/>
+
+            <TextView
+                android:id="@+id/dialog_download_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="213321231213321"
+                android:layout_alignParentRight="true"
+                android:textSize="11sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black_424242"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

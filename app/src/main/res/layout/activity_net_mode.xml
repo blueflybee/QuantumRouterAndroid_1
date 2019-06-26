@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <RelativeLayout
+
+            android:id="@+id/rl_dhcp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            android:onClick="dhcpMode">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="动态IP（DHCP）"/>
+
+            <TextView
+                android:id="@+id/tv_dhcp_on"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_dhcp"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_dhcp"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_static"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_dhcp"
+            android:background="@drawable/view_white_selector"
+            android:onClick="staticMode"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="静态IP"/>
+
+            <TextView
+                android:id="@+id/tv_static_on"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_static"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_static"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pppoe"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_static"
+            android:background="@drawable/view_white_selector"
+            android:onClick="pppoeMode"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="宽带拨号（PPPOE）"/>
+
+            <TextView
+                android:id="@+id/tv_pppoe_on"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_pppoe"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_pppoe"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,172 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.RouterStatusResponse"/>
+
+        <variable
+            name="routerStatus"
+            type="RouterStatusResponse"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_fafafa"
+        >
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_router_status_blacklist"
+            android:layout_marginBottom="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_statusTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    >
+
+                    <!--     <com.fernandocejas.android10.sample.presentation.view.component.GifView
+                             android:layout_width="125dp"
+                             android:layout_height="125dp"
+                             android:layout_centerInParent="true"
+                             android:enabled="false"
+                             app:gif="@raw/zhuan"/>-->
+
+                    <ImageView
+                        android:id="@+id/img_router"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/add_router"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_routerSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/img_router"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_router_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:lineSpacingExtra="6dp"
+                            android:textColor="@color/black_424242"
+                            android:textSize="16sp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/up_zt"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_router_upspeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="0.00 kb/s"
+                                android:textColor="@color/black_424242"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/down_zt"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_router_downspeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="0.00 kb/s"
+                                android:textColor="@color/black_424242"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_router_outline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="125dp"
+                        android:drawableLeft="@drawable/router_outline"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="网关离线，无法管理"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="13sp"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_router_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_statusTitle"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_router_status_blacklist"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/bl_blackname"
+            android:gravity="center"
+            android:text="黑名单"
+            android:textColor="@color/gray_666666"
+            android:textSize="17sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</layout>

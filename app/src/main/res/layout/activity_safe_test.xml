@@ -1,0 +1,91 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@color/blue_2196f3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_below="@id/title_bar"
+            >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                >
+                <ImageView
+                    android:id="@+id/img_safe_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/test_ing"
+                    android:visibility="visible"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/test_router"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/img_head"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:id="@+id/tv_safe_testing_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_safe_test_pass_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/lv_safe_test"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_title"
+            android:layout_above="@+id/btn_safe_test"
+            android:dividerHeight="5dp"
+            android:divider="@null"
+            android:groupIndicator="@null"
+            />
+
+        <Button
+            android:id="@+id/btn_safe_test"
+            android:text="取消体检"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+</layout>

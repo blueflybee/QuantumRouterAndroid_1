@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="18dp"
+            android:padding="4dp"
+            android:text="完成"
+            android:textColor="@color/black_424242"
+            android:textSize="17sp"/>
+
+        <com.blueflybee.uilibrary1.wheelview.LoopView
+            android:id="@+id/loopView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            app:awv_centerTextColor="@color/blue_2196f3"
+            app:awv_dividerTextColor="@color/gray_bdbdbd"
+            app:awv_outerTextColor="@color/gray_999999"
+            app:awv_isLoop="false"
+            app:awv_textsize="21"/>
+
+
+    </LinearLayout>
+</layout>

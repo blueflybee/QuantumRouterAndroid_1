@@ -1,0 +1,94 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/ic_logo"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:textSize="15sp"
+            android:textColor="@color/black_424242"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            android:text="三点安全管家\n为您营造安全舒适的家\n版本号: 1.0.0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp">
+
+            <TextView
+                android:id="@+id/tv_userAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/center_line"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="用户使用协议"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/v_centerLine"
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray_cdcdcd" />
+
+            <TextView
+                android:id="@+id/tv_secretAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/v_centerline"
+                android:clickable="true"
+                android:gravity="center"
+                android:textColor="@color/blue_2196f3"
+                android:text="隐私保护说明"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/gray_cdcdcd"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="三点科技"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/gray_cdcdcd"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Copyright 2017 - 2018 © 3caretec®.All rights reserved."
+            android:textSize="11sp" />
+    </LinearLayout>
+</layout>

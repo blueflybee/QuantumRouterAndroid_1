@@ -1,0 +1,81 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:id="@+id/ll_no_owned_routers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/pic1"/>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="50dp"
+                android:text="您还未添加网关，很多功能 还无法使用，请尽快添加哦～"
+                android:textSize="16sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="80dp"
+                android:onClick="bind"
+                android:text="开始添加"/>
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="skip"
+                android:text="以后再说"
+                android:textColor="@color/gray_666666"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_has_owned_routers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/TextViewStyleGroup"
+                android:text="您已经拥有的设备如下："/>
+
+
+            <ListView
+                android:id="@+id/lv_routers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                tools:listitem="@layout/item_search_router_own"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

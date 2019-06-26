@@ -1,0 +1,121 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.SearchRouterResponse"/>
+
+        <variable
+            name="rsp"
+            type="SearchRouterResponse"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_search_device_searching"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.fernandocejas.android10.sample.presentation.view.component.GifView
+                android:id="@+id/gif_add_search"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_centerInParent="true"
+                android:enabled="false"
+                app:gif="@raw/searching"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_search_device_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_router_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/add_router"/>
+
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/NormalTextViewStyle"
+                android:layout_below="@id/iv_router_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="您已经连接网关"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_router_name"
+                style="@style/NormalTextViewStyle"
+                android:layout_below="@+id/tv_tips"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:text="@{rsp.hostname}"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_search_device_add"
+                style="@style/BlueButtonStyle"
+                android:layout_below="@+id/tv_router_name"
+                android:layout_marginTop="100dp"
+                android:onClick="addDevice"
+                android:text="开始添加"/>
+
+            <Button
+                android:id="@+id/btn_first_config"
+                style="@style/BlueButtonStyle"
+                android:layout_below="@+id/tv_router_name"
+                android:visibility="gone"
+                android:layout_marginTop="100dp"
+                android:onClick="firstConfig"
+                android:text="立即配置"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search_device_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/pic1"/>
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="搜索不到网关"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

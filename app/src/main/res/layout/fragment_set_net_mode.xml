@@ -1,0 +1,130 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_set_questions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="设置问题与答案"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="未认证用户禁止访问网关"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/img_limit_router"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/ic_off"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="未认证用户将无法访问网关管理页"
+            android:textColor="@color/gray_999999"
+            android:textSize="14sp"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="未认证用户禁止访问有线电脑"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/img_limit_computer"
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/ic_off"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="未认证用户将无法在局域网内访问有线连接的电脑"
+            android:textColor="@color/gray_999999"
+            android:textSize="14sp"/>
+
+        <Button
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btn_closeAntiFrit"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textColor="@color/red_ff504c"
+            android:background="@drawable/delete_button"
+            />
+
+
+    </LinearLayout>
+</layout>

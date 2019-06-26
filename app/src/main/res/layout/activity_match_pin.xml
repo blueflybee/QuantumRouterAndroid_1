@@ -1,0 +1,141 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<data>-->
+
+    <!--<import type="com.qtec.router.model.rsp.SearchRouterResponse" />-->
+
+    <!--<variable-->
+    <!--name="rsp"-->
+    <!--type="SearchRouterResponse" />-->
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:text="请输入网关上现在显示的匹配码"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/productpickey"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/productpicpoint"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:text="网关面板上闪烁的数字即由量子网关产生的唯一量子密钥"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+        <com.blueflybee.passowrdinputlib.PasswordInputView
+            android:id="@+id/view_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ll_tips"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="27dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:maxLength="6"
+            app:borderWidth="1dp"
+            app:borderRadius="5dp"
+            app:borderColor="@color/gray_999999"
+            app:passwordColor="@color/black_424242"
+            app:passwordLength="6"
+            app:passwordWidth="6dp"/>
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view_password"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white_transparent"
+            android:onClick="skip"
+            android:text="跳过此步骤 >"
+            android:textColor="@color/gray_999999"
+            android:textSize="13dp"/>
+
+        <EditText
+            android:id="@+id/et_test_pin"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_skip"
+            android:layout_centerHorizontal="true"
+            android:hint="请输入16位PIN码"
+            android:text="31313131313131313131313131313131"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_test_pin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:visibility="visible"/>
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_load_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:onClick="decryptKey"
+            android:text="载入密钥"/>
+
+
+    </RelativeLayout>
+</layout>

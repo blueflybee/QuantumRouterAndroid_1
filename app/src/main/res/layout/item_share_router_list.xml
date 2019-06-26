@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/img_router"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_router_blue"
+            />
+
+        <LinearLayout
+            android:id="@+id/rl_routerName"
+            android:layout_width="255dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_router"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_routerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="九州网关11332323232sasaaasaasasasasasa3232232332"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_memNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="正在共享给3位成员"
+                android:textColor="@color/gray_999999"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="6dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_navigate_next_black_48dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:background="@color/gray"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

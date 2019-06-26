@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_record_date"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:textColor="@color/black_424242"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:text="今天" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="106dp">
+        <ImageView
+            android:id="@+id/img_record_head"
+            android:layout_width="100dp"
+            android:layout_height="67dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_msg_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/img_record_head"
+            android:gravity="left|center_vertical"
+            >
+            <TextView
+                android:id="@+id/tv_record_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/black_424242"
+                android:singleLine="true"
+                android:maxWidth="160dp"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/tv_record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/gray_999999"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_msg_red"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/message_one"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            />
+
+        <CheckBox
+            android:id="@+id/cb_doorRecord"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/check_box_background"
+            android:button="@null"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/gray"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

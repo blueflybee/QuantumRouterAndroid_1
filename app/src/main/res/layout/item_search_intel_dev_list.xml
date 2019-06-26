@@ -1,0 +1,83 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.SearchIntelDevResponse.IntelDev" />
+
+        <variable
+            name="dev"
+            type="IntelDev" />
+    </data>
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="visible">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_dev"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/ic_launcher" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_dev_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/iv_dev"-->
+            <!--android:text="@{dev.devname}" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_add_dev_auto"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="开始添加" />-->
+
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rv_search_locker"
+        android:background="@drawable/view_white_selector"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_dev_name"
+            style="@style/MineFeedbackTvStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:drawableStart="@drawable/lock_blue"
+            android:text="@{dev.devname}"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:textColor="@color/gray_999999"
+            android:maxEms="20"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/MineFeedbackIvStyle"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:background="@color/gray_bdbdbd"
+            />
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,98 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        >
+
+        <include
+            layout="@layout/app_titlebar" />
+
+        <ListView
+            android:id="@+id/lv_feed_back_advice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_bottom"
+            android:layout_below="@id/title_bar"
+            android:dividerHeight="5dp"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_cdcdcd" >
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@null"
+                android:text="发送" />
+
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@color/white"
+                android:singleLine="true"
+                android:textColor="@color/black_424242"
+                android:textColorHint="@color/gray"
+                android:paddingLeft="5dp"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+       <!-- <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mainLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/dialog_reply"
+                        file_paths="@file_paths/item_feedback_left" />
+
+                    <include
+                        android:id="@+id/dialog_ask"
+                        file_paths="@file_paths/item_feedback_right" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_sendFeedBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="发送" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp" />
+            </LinearLayout>
+        </ScrollView>-->
+    </RelativeLayout>
+</layout>

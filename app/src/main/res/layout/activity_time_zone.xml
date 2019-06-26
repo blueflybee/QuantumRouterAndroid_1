@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_time_zone_set"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onTimeZoneSetClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="时区设置"/>
+
+            <TextView
+                android:id="@+id/tv_time_zone"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_time_zone_set"
+                android:text=""
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_time_zone_set"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_time_zone_set"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onTimeSetClick"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="时间设置"/>
+
+            <ImageView
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

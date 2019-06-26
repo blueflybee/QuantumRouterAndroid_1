@@ -1,0 +1,49 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ic_logo"/>
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@id/iv_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:text=""
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_version_info"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@id/tv_version_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textSize="13sp"/>
+
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/BlueButtonStyle"
+            android:layout_below="@id/tv_version_info"
+            android:layout_marginTop="26dp"
+            android:onClick="update"
+            android:visibility="gone"
+            android:text="下载并安装"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.GetNetModeResponse"/>
+
+        <import type="android.view.View"/>
+
+        <import type="com.fernandocejas.android10.sample.domain.constant.ModelConstant"/>
+
+        <variable
+            name="netModeResponse"
+            type="GetNetModeResponse"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rv_ip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="IP地址"/>
+
+            <EditText
+                android:id="@+id/et_ip"
+                style="@style/NickNameInputStyle"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="110dp"
+                android:digits="0123456789."
+                android:inputType="number"
+                android:hint="请输入IP地址"
+                android:maxLength="15"
+                android:text="@{netModeResponse.ipaddr}"
+                android:textColorHint="@color/gray_bdbdbd"
+                android:textSize="14sp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_subnet_mask"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rv_ip"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="子网掩码"/>
+
+            <EditText
+                android:id="@+id/et_subnet_mask"
+                style="@style/NickNameInputStyle"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="110dp"
+                android:digits="0123456789."
+                android:hint="请输入子网掩码地址"
+                android:inputType="number"
+                android:maxLength="15"
+                android:text="@{netModeResponse.netmask}"
+                android:textColorHint="@color/gray_bdbdbd"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_gateway"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rv_subnet_mask"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="网关"/>
+
+            <EditText
+                android:id="@+id/et_gateway"
+                style="@style/NickNameInputStyle"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="110dp"
+                android:digits="0123456789."
+                android:hint="请输入网关地址"
+                android:inputType="number"
+                android:maxLength="15"
+                android:text="@{netModeResponse.gateway}"
+                android:textColorHint="@color/gray_bdbdbd"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_first_dns"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rv_gateway"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="首选DNS"/>
+
+            <EditText
+                android:id="@+id/et_first_dns"
+                style="@style/NickNameInputStyle"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="110dp"
+                android:digits="0123456789."
+                android:hint="请输入首选DNS"
+                android:inputType="number"
+                android:maxLength="15"
+                android:text="@{netModeResponse.dns.split(ModelConstant.ONE_SPACE)[0]}"
+                android:textColorHint="@color/gray_bdbdbd"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_second_dns"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rv_first_dns"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="备用DNS"/>
+
+            <EditText
+                android:id="@+id/et_second_dns"
+                style="@style/NickNameInputStyle"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="110dp"
+                android:digits="0123456789."
+                android:hint="请输入备用DNS"
+                android:inputType="number"
+                android:maxLength="15"
+                android:text="@{netModeResponse.dns.split(ModelConstant.ONE_SPACE)[1]}"
+                android:textColorHint="@color/gray_bdbdbd"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/BlueButtonStyle"
+            android:layout_below="@+id/rv_second_dns"
+            android:layout_marginTop="75dp"
+            android:onClick="confirm"
+            android:text="确认"/>
+
+
+    </RelativeLayout>
+
+</layout>

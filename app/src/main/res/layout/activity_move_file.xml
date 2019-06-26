@@ -1,0 +1,87 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <TextView
+            android:id="@+id/tv_move_file_title"
+            android:layout_below="@id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black_424242"
+            android:background="@color/gray_f5f5f5"
+            android:text="选择目标文件夹(当前选择：根目录/)"
+            />
+
+        <ListView
+            android:id="@+id/lv_moveFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/tv_move_file_title"
+            android:divider="@null"
+            android:visibility="visible"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_f5f5f5"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/btn_newFolder"
+                    android:layout_width="162dp"
+                    android:layout_height="35dp"
+                    android:text="新建文件夹"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@color/blue_2196f3"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/btn_moveFile"
+                    android:layout_width="162dp"
+                    android:layout_height="35dp"
+                    android:text="移动(1)"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@color/blue_2196f3"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

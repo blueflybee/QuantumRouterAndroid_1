@@ -1,0 +1,64 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.fernandocejas.android10.sample.presentation.view.device.router.data.Router.BaseInfo.InfoItem"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="info"
+            type="InfoItem"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_dev_frag_router"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_setting_name"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="@{info.title}"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:text="@{info.name}"
+            android:textColor="@color/gray_999999"
+            android:maxEms="20"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/iv_arrow"
+            style="@style/MineFeedbackIvStyle"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:visibility="@{info.hasFoot ? View.GONE : View.VISIBLE}"
+            />
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_fafafa"
+            android:visibility="@{info.hasFoot ? View.VISIBLE : View.GONE}"
+            />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,180 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_finger_print"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_margin="12.5dp"
+                    android:background="@drawable/shape_dev_fragment_add_new_router"
+                    android:gravity="center"
+                    android:onClick="addFingerprint"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:drawableLeft="@drawable/indexic_addnew"
+                        android:drawablePadding="6dp"
+                        android:text="添加指纹"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_marginTop="15dp"
+                        android:text="请确认您的门锁通电，并站到门口，准备添加指纹"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_add_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_margin="12.5dp"
+                    android:background="@drawable/shape_dev_fragment_add_new_router"
+                    android:gravity="center"
+                    android:onClick="addPassword"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:drawableLeft="@drawable/indexic_addnew"
+                        android:drawablePadding="6dp"
+                        android:text="添加密码"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_marginTop="15dp"
+                        android:text="请确认您的门锁通电，并站到门口，准备添加密码"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_fingerprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/view_white_selector"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/MineFeedbackTvStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="25dp"
+                        android:drawableStart="@drawable/noun_286941_f"
+                        android:text="已添加指纹"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/iv_arrow"
+                        android:ellipsize="end"
+                        android:maxEms="20"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="25dp"
+                        android:background="@color/gray_bdbdbd"
+                        />
+
+                </RelativeLayout>
+
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_fingerprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:visibility="gone"
+                    tools:listitem="@layout/item_secure_manage_fingerprint">
+                </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/view_white_selector"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/MineFeedbackTvStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="25dp"
+                        android:drawableStart="@drawable/noun_286941_a"
+                        android:text="已添加密码"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/iv_arrow_1"
+                        android:ellipsize="end"
+                        android:maxEms="20"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_1"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="25dp"
+                        android:background="@color/gray_bdbdbd"
+                        />
+
+                </RelativeLayout>
+
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:visibility="gone"
+                    tools:listitem="@layout/item_secure_manage_fingerprint">
+                </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

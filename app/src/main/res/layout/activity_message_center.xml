@@ -1,0 +1,110 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_deviceShare"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="设备中心"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/img_navigator"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_toLeftOf="@+id/img_navigator"
+                android:layout_marginRight="20dp"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:background="@drawable/message_one"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:background="@color/gray"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_otherNotification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="其他通知"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/img_navigator1"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_notice_count"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/img_navigator1"
+                android:layout_marginRight="20dp"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"
+                android:background="@drawable/message_one"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:background="@color/gray"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

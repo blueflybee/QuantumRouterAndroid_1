@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_safe_period"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onSafePeriodClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="安全防护时间段"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_screen_off"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_warning_push"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_safe_period"
+            android:background="@drawable/view_white_selector"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="报警推送"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchBtn_warning_push"
+                style="@style/SwitchStyle_1"
+                android:layout_marginTop="12dp"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_push_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_warning_push"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"
+            android:text="开启后可进行相关报警参数的设置"
+            android:textColor="@color/gray_999999"
+            android:textSize="14sp"
+            />
+        
+        <LinearLayout
+            android:id="@+id/ll_warning_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_push_tips"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_move_watch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector"
+                >
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="移动侦测"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchBtn_move_watch"
+                    style="@style/SwitchStyle_1"
+                    android:layout_marginTop="12dp"
+                    />
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_move_watch_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_move_watch"
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"
+                android:text="开启后，如果检测到物体移动，会提示报警"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"
+                />
+
+            <RelativeLayout
+
+                android:id="@+id/rl_move_aucuracy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_move_watch_tips"
+                android:background="@drawable/view_white_selector"
+                android:onClick="onMoveAccuracy">
+
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="移动侦测灵敏度"/>
+
+                <ImageView
+                    android:id="@+id/img_accuracy"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_move_accuracy_data"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/img_accuracy"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text=""
+                    />
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_move_accuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_move_aucuracy"
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"
+                android:text="可调整移动侦测灵敏度"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_warning_volume"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_move_accuracy"
+                android:background="@drawable/view_white_selector"
+                >
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="报警声音开关"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchBtn_move_volume"
+                    style="@style/SwitchStyle_1"
+                    android:layout_marginTop="12dp"
+                    />
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_warning_volume"
+                android:layout_marginLeft="15dp"
+                android:padding="10dp"
+                android:text="报警声音关闭后，当发生报警时，设备将不发出声音"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

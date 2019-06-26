@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/add_router"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_height="5dp"
+                    android:background="@color/gray_fafafa"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_router_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="modifyRouterName">
+
+                    <TextView
+                        android:id="@+id/tv_router_name_label"
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="网关名称"/>
+
+                    <TextView
+                        android:id="@+id/tv_router_name"
+                        style="@style/NormalTextViewStyle_1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_toLeftOf="@+id/iv_router_name"
+                        android:layout_toRightOf="@+id/tv_router_name_label"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_router_name"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginEnd="20dp"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="25dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_router_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="routerGroup"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="网关分组"/>
+
+                    <TextView
+                        android:id="@+id/tv_router_group"
+                        style="@style/NormalTextViewStyle_1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toStartOf="@+id/iv_router_group"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_router_group"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginEnd="20dp"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="25dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="routerDesc">
+
+                    <TextView
+                        android:id="@+id/tv_router_desc_label"
+                        style="@style/NormalTextViewStyle"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:text="描述信息"/>
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        style="@style/NormalTextViewStyle_1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_toLeftOf="@+id/iv_desc"
+                        android:layout_toRightOf="@+id/tv_router_desc_label"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_desc"
+                        style="@style/MineFeedbackIvStyle"
+                        android:layout_marginEnd="20dp"/>
+
+                    <View
+                        style="@style/LineHorizontalStyle"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_router_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/title_bar"
+                    android:divider="@null"
+                    tools:listitem="@layout/item_router_info">
+                </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

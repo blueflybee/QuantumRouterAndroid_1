@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_error_black"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/NormalTextViewStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="门锁未在配置状态"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/NormalTextViewStyle"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textSize="14sp"
+        android:text="请触碰门锁背后的按钮开启配置状态。"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/BlueButtonStyle"
+        android:layout_below="@+id/tv_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="25dp"
+        android:text="确认"/>
+
+</RelativeLayout>

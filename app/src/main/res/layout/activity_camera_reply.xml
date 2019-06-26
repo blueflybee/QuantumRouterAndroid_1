@@ -1,0 +1,253 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:onClick="onTitleBarBackClick"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/topbar_back"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="远程回放"
+                android:gravity="center"
+                android:textColor="@color/black_424242"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_videoReply"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:visibility="visible"
+                android:onClick="onVideoHistoryClick"
+                >
+                <TextView
+                    android:id="@+id/tv_video_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频回放"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_424242"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_screen_surface"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            >
+
+            <SurfaceView
+                android:id="@+id/sv_surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_linkState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="#FFFFFF" />
+
+            <SeekBar
+                android:id="@+id/seek_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxHeight="10dip"
+                android:minHeight="10dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:thumb="@drawable/ic_slider"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rl_operate"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_video_reply"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:onClick="onVideoReplyClick"
+                >
+                <ImageView
+                    android:id="@+id/img_video_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_replay_stop"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_voice"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_width="40dp"
+                android:layout_toRightOf="@+id/rl_video_reply"
+                android:layout_height="match_parent"
+                android:onClick="onVoiceClick"
+                >
+                <ImageView
+                    android:id="@+id/img_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_voice_press"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_video"
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rl_voice"
+                android:onClick="onVideoClick"
+                >
+                <ImageView
+                    android:id="@+id/img_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_video_press"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_pic"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/rl_video"
+                android:onClick="onPicClick"
+                >
+                <ImageView
+                    android:id="@+id/img_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_picture_press"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_screen"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:onClick="onScreenAlmostClick"
+                >
+                <ImageView
+                    android:id="@+id/img_screen_most"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_allp"
+                    />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rl_reply_time_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            >
+            <com.blueflybee.uilibrary1.timeruler.TimeRuler
+                android:id="@+id/time_ruler"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                app:bigScaleLength="20dp"
+                app:bigScaleWidth="1dp"
+                app:count="4"
+                app:currentScale="40"
+                app:cursorHeight="152dp"
+                app:cursorWidth="1dp"
+                app:cursorColor="#2196F3"
+                app:cursorCircleRadius="4dp"
+                app:innerRulerBackgroundColor="@color/white"
+                app:innerRulerBackground="@drawable/bg_wave"
+                app:maxScale="96"
+                app:minScale="0"
+                app:numberTextColor="@color/black"
+                app:numberTextSize="13sp"
+                app:paddingTopInnerRuler="20dp"
+                app:paddingBottomInnerRuler="6dp"
+                app:scaleColor="@color/colorGray"
+                app:scaleInterval="15.49dp"
+                app:smallScaleLength="3dp"
+                app:smallScaleWidth="1dp"
+                app:textMarginTop="12dp"
+                app:textMarginLeft="6dp"
+                app:outlineWidth="2dp"
+                />
+
+            <com.blueflybee.uilibrary1.timeruler.TimeNumberLayout
+                android:id="@+id/time_number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_ruler"
+                android:layout_marginTop="10dp"
+                app:scaleTextColor="@color/black"
+                app:scaleTextSize="50sp"
+                app:unitText=""/>
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+</layout>

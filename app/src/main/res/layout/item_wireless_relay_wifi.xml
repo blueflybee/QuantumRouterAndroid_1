@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.GetWirelessListResponse.WirelessBean"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="wifi"
+            type="com.qtec.router.model.rsp.GetWirelessListResponse.WirelessBean"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_connect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            >
+            <TextView
+                android:id="@+id/tv_wireless_ssid"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_wifi_black"
+                android:drawablePadding="15dp"
+                android:text="@{wifi.ssid}"/>
+
+            <TextView
+                android:id="@+id/tv_connect_state"
+                style="@style/TextViewStyle_1"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:visibility="gone"
+                android:text="wewewew"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/LargeClickableImageView"
+            android:src="@drawable/ic_navigate_next_black_48dp"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_bdbdbd"
+            android:layout_marginLeft="25dp"/>
+
+    </RelativeLayout>
+
+</layout>

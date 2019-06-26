@@ -1,0 +1,40 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:layout_below="@id/title_bar"
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/et_input_cat_no"
+                style="@style/LoginInputStyle"
+                android:inputType="text"
+                android:maxLength="32"
+                android:hint="请输入设备序列号"
+                android:textColor="@color/black_424242"
+                android:layout_toLeftOf="@+id/iv_clear"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:visibility="gone"
+                style="@style/ClearTextIvStyle"
+                android:onClick="clearText"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/et_input_cat_no"
+                android:layout_marginTop="12.5dp"
+                android:background="@color/gray_f3f3f3"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

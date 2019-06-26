@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_lock_use_more_date"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:textColor="@color/black_424242"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:text="今天" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/img_lock_use_more_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/img_lock_use_more_head"
+            android:gravity="left|center_vertical"
+            >
+            <TextView
+                android:id="@+id/tv_lock_use_more_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/black_424242"
+                android:singleLine="true"
+                android:maxWidth="180dp"
+                />
+            <TextView
+                android:id="@+id/tv_lock_use_more_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:textColor="@color/gray_999999"
+                android:singleLine="true"
+                android:maxWidth="180dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_lock_use_more_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="密码开锁"
+            android:textSize="15sp"
+            android:textColor="@color/gray_999999"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:background="@color/gray"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

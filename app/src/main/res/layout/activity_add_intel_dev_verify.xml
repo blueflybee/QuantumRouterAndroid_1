@@ -1,0 +1,46 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/et_verify_enter_pwd"
+                style="@style/PwdInputStyle"
+                android:layout_toLeftOf="@+id/iv_show_pwd"
+                android:hint="请输入门锁连接网关管理员密码"
+                android:inputType="textPassword"/>
+
+            <CheckBox
+                android:id="@+id/iv_show_pwd"
+                style="@style/ShowPwdCheckBoxStyle"
+                android:onClick="changeInputType"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/iv_show_pwd"
+                android:layout_marginTop="12.5dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/ErrTipTvStyle"
+            android:layout_marginTop="17dp"/>
+
+        <Button
+            android:id="@+id/btn_verify_done"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="62.5dp"
+            android:onClick="bind"
+            android:text="添加门锁"/>
+
+    </LinearLayout>
+</layout>

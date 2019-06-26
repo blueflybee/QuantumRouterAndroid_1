@@ -1,0 +1,48 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:background="@color/gray_f3f3f3"/>
+
+        <android.support.design.widget.TabLayout
+            android:background="@color/white_transparent"
+            android:id="@+id/tablayout"
+            style="@style/CustomTab"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/tab_home_selector"
+                android:text="首页"/>
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/tab_safety_selector"
+                android:text="安全"/>
+
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/tab_mine_selector"
+                android:text="我的"/>
+
+        </android.support.design.widget.TabLayout>
+    </LinearLayout>
+</layout>

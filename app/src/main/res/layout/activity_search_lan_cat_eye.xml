@@ -1,0 +1,138 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_connect_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_below="@id/title_bar"
+            >
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rl_connect_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ef_formatz">
+
+                <com.flybluebee.circleprogress.CircleProgress
+                    android:id="@+id/progress_cat_eye"
+                    android:layout_width="198dp"
+                    android:layout_height="198dp"
+                    android:layout_centerInParent="true"
+                    custom:bgColor="@color/blue_c6e2ff"
+                    custom:currProgress="0"
+                    custom:foreEndColor="@color/blue_2196f3"
+                    custom:foreStartColor="@color/blue_2196f3"
+                    custom:maxProgress="360"
+                    custom:progressInitialPosition="-180"
+                    custom:progressWidth="3dp"
+                    custom:useAnimation="true"
+                    custom:useGradient="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_progress_cat_eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="65dp"
+                    android:text="0"
+                    android:textColor="@color/blue_2196f3"
+                    android:textSize="60sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="%"
+                    android:layout_marginTop="100dp"
+                    android:layout_toRightOf="@+id/tv_progress_cat_eye"
+                    android:textColor="@color/blue_2196f3"
+                    android:textSize="25sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_search_state_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:gravity="center"
+                android:text="设备连接中，请稍候…"
+                android:layout_below="@id/rl_connect_progress"
+                android:textSize="16sp"
+                android:textColor="@color/blue_2196f3"
+                />
+
+            <ImageView
+                android:id="@+id/iv_stop_scan"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="145dp"
+                android:background="@drawable/button_search"
+                android:layout_marginTop="49dp"
+                android:onClick="stopSearchClick"
+                android:layout_below="@+id/tv_search_state_tips"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/broad_list"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_connect_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_below="@id/title_bar"
+            >
+
+            <ImageView
+                android:id="@+id/img_connect_fail"
+                android:layout_width="198dp"
+                android:layout_height="198dp"
+                android:onClick="waveConfig"
+                android:background="@drawable/connection_failed"
+                />
+
+            <TextView
+                android:id="@+id/tv_search_state_tips1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:gravity="center"
+                android:text="设备连接失败，请重新连接"
+                android:layout_below="@id/img_connect_fail"
+                android:textSize="16sp"
+                android:textColor="@color/red_fc7b8a"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

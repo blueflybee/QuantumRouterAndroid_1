@@ -1,0 +1,72 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <!--<import type="com.fernandocejas.android10.sample.presentation.view.device.router.data.Router.RouterSetting"/>-->
+
+        <!--<variable-->
+        <!--name="setting"-->
+        <!--type="RouterSetting"/>-->
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_dev_frag_router"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/img_head"
+            android:layout_toStartOf="@+id/tv_admin_tip"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="1"/>
+
+        <TextView
+            android:id="@+id/tv_admin_tip"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/iv_arrow"
+            android:background="@drawable/shape_fragment_dev_current_connected"
+            android:padding="3dp"
+            android:text="管理员"
+            android:textColor="@color/blue_2196f3"
+            android:textSize="10sp"/>
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_status"-->
+        <!--style="@style/NormalTextViewStyle"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_toLeftOf="@+id/iv_arrow"-->
+        <!--android:textColor="@color/gray_999999"-->
+        <!--android:textSize="14sp"/>-->
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/MineFeedbackIvStyle"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:background="@color/gray_bdbdbd"/>
+
+    </RelativeLayout>
+
+</layout>

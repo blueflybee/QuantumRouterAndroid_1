@@ -1,0 +1,115 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--   <data>
+
+           <import type="com.qtec.router.model.rsp.RouterStatusResponse" />
+
+           <variable
+               name="routerStatus"
+               type="RouterStatusResponse" />
+       </data>
+   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_deviceRemark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black_424242"
+                android:text="设备备注"
+                android:layout_alignBaseline="@+id/tv_lockName"
+                android:layout_alignBottom="@+id/tv_lockName"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"/>
+
+            <ImageView
+                android:id="@+id/img_remark_more"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_deviceRemark"
+                android:layout_toLeftOf="@+id/img_remark_more"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:layout_marginRight="15dp"
+                android:textSize="14sp"
+                android:text="九州量子智能"
+                android:textColor="@color/gray_999999" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_deviceName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                android:textColor="@color/black_424242"
+                android:text="设备型号" />
+
+            <ImageView
+                android:id="@+id/img_more"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ic_navigate_next_black_48dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_deviceName"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/img_more"
+                android:layout_marginRight="15dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:textColor="@color/gray_999999"
+                android:text="小米6旗舰机" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

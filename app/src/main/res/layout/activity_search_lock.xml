@@ -1,0 +1,131 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<data>-->
+
+        <!--<import type="com.qtec.router.model.rsp.SearchIntelDevResponse"/>-->
+
+        <!--<variable-->
+            <!--name="rsp"-->
+            <!--type="SearchIntelDevResponse"/>-->
+    <!--</data>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextViewStyleGroup"-->
+                    <!--android:text="开始搜索..."/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/ll_auto_searching"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="100dp"-->
+                        <!--android:orientation="vertical">-->
+
+
+                        <!--<com.fernandocejas.android10.sample.presentation.view.component.GifView-->
+                            <!--android:id="@+id/gif_add_search"-->
+                            <!--android:layout_width="100dp"-->
+                            <!--android:layout_height="100dp"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:enabled="false"-->
+                            <!--app:gif="@raw/addlock_searching"/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_search_fail"-->
+                            <!--style="@style/NormalTextViewStyle"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="搜索不到门锁"-->
+                            <!--android:textColor="@color/gray_999999"-->
+                            <!--android:visibility="gone"/>-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                        <!--android:id="@+id/rv_dev_list"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:visibility="gone">-->
+
+                    <!--</android.support.v7.widget.RecyclerView>-->
+
+
+                    <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/rl_auto_search_add"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="69dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/view_white_selector"&ndash;&gt;-->
+                    <!--&lt;!&ndash;andronStartBtnClicklick="addDevAuto"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:visibility="gone">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/tv_router_name_auto"&ndash;&gt;-->
+                    <!--&lt;!&ndash;style="@style/MineFeedbackTvStyle"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginStart="25dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:drawableLeft="@drawable/ic_router_black"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="@{rsp.hostname}"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/iv_client_auto"&ndash;&gt;-->
+                    <!--&lt;!&ndash;style="@style/MineFeedbackIvStyle"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="20dp"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextViewStyleGroup"-->
+                    <!--android:text="手动添加"/>-->
+
+
+                <!--<com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView-->
+                    <!--android:id="@+id/lv_lockers"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:divider="@null"-->
+                    <!--tools:listitem="@file_paths/item_add_locker">-->
+                <!--</com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>-->
+
+
+            <!--</LinearLayout>-->
+
+        <!--</ScrollView>-->
+
+
+        <TextView
+            style="@style/TextViewStyleGroup"
+            android:text="开始搜索..."/>
+
+
+        <ListView
+            android:id="@+id/lv_locks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            tools:listitem="@layout/item_add_locker"/>
+
+    </LinearLayout>
+</layout>

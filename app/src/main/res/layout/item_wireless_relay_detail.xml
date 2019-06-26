@@ -1,0 +1,48 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+        <!--<import type="com.fernandocejas.android10.sample.presentation.view.device.router.data.Router.BaseInfo.InfoItem"/>-->
+
+        <!--<import type="android.view.View"/>-->
+
+        <!--<variable-->
+            <!--name="info"-->
+            <!--type="InfoItem"/>-->
+    <!--</data>-->
+
+
+    <RelativeLayout
+        android:id="@+id/rv_dev_frag_router"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="信号强度"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="强"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_999999"
+            android:maxEms="40"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:background="@color/gray_bdbdbd"
+            />
+
+    </RelativeLayout>
+
+</layout>

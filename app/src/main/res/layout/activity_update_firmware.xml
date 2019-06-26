@@ -1,0 +1,71 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ImageView
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/update"
+            android:id="@+id/iv_firmware_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="将会发送验证码至您的手机"
+            android:textColor="@color/black_424242"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_below="@+id/iv_firmware_pic"
+            android:id="@+id/tv_current_version"
+            style="@style/TextViewStyle_1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_below="@+id/tv_current_version"
+            android:id="@+id/tv_last_version"
+            style="@style/TextViewStyle_1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_below="@+id/tv_last_version"
+            android:id="@+id/tv_status"
+            style="@style/TextViewStyle_1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/black_424242"
+            android:textSize="14sp"/>
+
+        <Button
+            android:layout_below="@+id/tv_status"
+            android:id="@+id/btn_check_version"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:onClick="checkUpdate"
+            android:text="重新检测"/>
+
+        <Button
+            android:layout_below="@+id/tv_status"
+            android:id="@+id/btn_update"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:onClick="update"
+            android:text="下载并安装"/>
+
+    </RelativeLayout>
+</layout>

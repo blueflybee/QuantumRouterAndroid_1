@@ -1,0 +1,135 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_childcare_offline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:id="@+id/ll_childcare_title"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/blue_2196f3"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tool_children"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_head"
+                    android:layout_marginTop="20dp"
+                    android:text="关怀孩子的上网时间，合理、科学上网"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_childcare_click_offline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/loading_no"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加载失败，轻触屏幕重新加载"
+                    android:layout_marginTop="25dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_bdbdbd"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <com.fernandocejas.android10.sample.presentation.view.component.ScrollViewForMove
+            android:id="@+id/scrollView_child"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:id="@+id/ll_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/blue_2196f3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tool_children"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_head"
+                        android:layout_marginTop="20dp"
+                        android:text="关怀孩子的上网时间，合理、科学上网"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="设备列表"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"/>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_child_care"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    />
+            </LinearLayout>
+
+        </com.fernandocejas.android10.sample.presentation.view.component.ScrollViewForMove>
+
+
+
+
+
+    </LinearLayout>
+</layout>

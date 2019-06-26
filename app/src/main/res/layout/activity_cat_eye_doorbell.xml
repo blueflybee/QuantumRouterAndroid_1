@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/NormalTextViewStyle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="ignore"
+            android:padding="5dp"
+            android:text="忽略"
+            android:textColor="@color/blue_2196f3"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="是否确认注销该用户？"
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_content"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:onClick="goDetail"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:text="查看实况"/>
+
+            <Button
+                android:id="@+id/btn_unlock"
+                android:onClick="unlock"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:text="直接开门"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

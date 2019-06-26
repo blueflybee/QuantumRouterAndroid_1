@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_edit_samba_file"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@color/gray_f1f1f1"
+              android:orientation="horizontal"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_downLoad_file"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/nas_filedownload"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="下载"
+            android:textColor="@color/gray_999999"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_rename_file"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/nas_filenewname"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="重命名"
+            android:textColor="@color/gray_999999"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_move_file"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/nas_filemove"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="移动"
+            android:textColor="@color/gray_999999"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delete_file"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/nas_filedelete"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="删除"
+            android:textColor="@color/gray_999999"
+            android:textSize="11sp"
+            />
+    </LinearLayout>
+</LinearLayout>

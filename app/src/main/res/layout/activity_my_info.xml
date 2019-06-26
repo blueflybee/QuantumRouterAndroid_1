@@ -1,0 +1,100 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.fernandocejas.android10.sample.data.constant.PrefConstant"/>
+
+        <variable
+            name="sp"
+            type="com.blankj.utilcode.util.SPUtils"/>
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_iv_head"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_below="@id/title_bar">
+
+            <ImageView
+                android:id="@+id/img_head"
+                style="@style/HeadIvStyle"
+                android:layout_centerInParent="true"
+                android:onClick="modifyHeadImage"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_iv_head"
+            android:background="@color/white"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/tv_nickName"
+                style="@style/MineFeedbackTvStyle"
+                android:text="用户昵称"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@+id/tv_nickName">
+
+                <EditText
+                    android:id="@+id/et_nickName"
+                    style="@style/NickNameInputStyle"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:textColor="@color/black_424242"/>
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    style="@style/ClearTextIvStyle"
+                    android:onClick="clearNickName"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_modify_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_nickName"
+            android:background="@color/white"
+            android:clickable="true"
+            android:onClick="modifyPassword"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_modiftPwd"
+                style="@style/MineFeedbackTvStyle"
+                android:text="修改账号密码"/>
+
+            <ImageView style="@style/MineFeedbackIvStyle"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/WidthMatchParentBtn"
+            android:layout_below="@+id/rl_modify_pwd"
+            android:layout_marginTop="10dp"
+            android:onClick="logout"
+            android:text="退出登录"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,64 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_search_device_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_router_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/b_router"/>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/NormalTextViewStyle"
+                android:layout_below="@+id/iv_router_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="66dp"
+                android:text="检测到该网关尚未被配置或已恢复出厂设置"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/NormalTextViewStyle"
+                android:layout_below="@+id/tv_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/blue_1194f6"
+                android:text="提示：请连接网关wifi后操作"
+                android:textSize="14sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_below="@+id/tv_tips"
+                android:layout_marginTop="75dp"
+                android:onClick="startConfig"
+                android:text="配置网关"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

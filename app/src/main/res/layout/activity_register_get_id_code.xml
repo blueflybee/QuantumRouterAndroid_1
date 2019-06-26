@@ -1,0 +1,47 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar" />
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/et_enterNum"
+                style="@style/LoginInputStyle"
+                android:layout_toLeftOf="@+id/iv_clear"
+                android:hint="手机号"/>
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:onClick="clearUsername"
+                style="@style/ClearTextIvStyle"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/iv_clear"
+                android:layout_marginTop="12.5dp"
+                android:background="@color/gray_f3f3f3"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/ErrTipTvStyle"
+            android:layout_marginTop="17dp"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="62.5dp"
+            android:onClick="nextStep"
+            android:text="下一步"/>
+
+
+    </LinearLayout>
+</layout>

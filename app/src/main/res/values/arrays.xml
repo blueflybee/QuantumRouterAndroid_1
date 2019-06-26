@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="router_group">
+        <item>家庭</item>
+        <item>公司</item>
+        <item>公共场合</item>
+        <item>+ 新增分组</item>
+    </string-array>
+
+    <!-- sd卡录像状态数组 -->
+    <string-array name="array_sdcard_state">
+        <item>未发现SD卡</item>
+        <item>未格式化</item>
+        <item>存储卡已满</item>
+        <item>录像中…</item>
+        <item>准备就绪</item>
+    </string-array>
+
+    <!-- 录像模式数组 -->
+    <string-array name="array_record_mode">
+        <item>停止录像</item>
+        <item>全天录像</item>
+        <item>报警录像</item>
+        <item>缩时录像</item>
+    </string-array>
+
+</resources>

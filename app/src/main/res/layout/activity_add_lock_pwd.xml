@@ -1,0 +1,72 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="112dp"
+                android:text="请输入6位数开锁密码"
+                android:textColor="@color/gray_bdbdbd"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_marginTop="35dp">
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    style="@style/LoginInputStyle"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:digits="@string/filter_number"
+                    android:text=""
+                    android:textSize="36sp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_height="1.5dp"
+                    android:layout_below="@id/et_pwd"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="12.5dp"
+                    android:background="@color/gray_f3f3f3"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/ErrTipTvStyle"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="17dp"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="110dp"
+                android:onClick="nextStep"
+                android:text="下一步"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

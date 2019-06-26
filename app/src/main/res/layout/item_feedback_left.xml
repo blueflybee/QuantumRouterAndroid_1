@@ -1,0 +1,69 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/item_ask_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/gray_fafafa"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_sendtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2017-7-26 09:05"
+                android:textColor="@color/gray_999999"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_head_dialog"
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/app_icon"/>
+
+            <ImageView
+                android:id="@+id/img_white_corner"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/chat_white_corner"
+                />
+
+            <TextView
+                android:id="@+id/tv_chatcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/chat_reply_filter_shape"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="50dp"
+                android:padding="10dp"
+                android:text="您好，请，请简要描述您的问题，请简要描述您的问题，请简要描述您的问题，请简要描述您的问题，请简要描述您的问题，请简要描述您的问题，请简要描述您的问题简要描述您的问题或建议"
+                android:textColor="@color/black_424242"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

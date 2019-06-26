@@ -1,0 +1,313 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/blue_2196f3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                >
+                <ImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/test_ing"
+                    android:visibility="visible"
+                    />
+               <!-- <com.fernandocejas.android10.sample.presentation.view.component.GifView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:enabled="false"
+                    app:gif="@raw/test_ing"
+                    />-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/test_router"
+                    />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/img_head"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_safe_inspec_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_safe_inspec_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_wifi"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center_vertical"
+                    android:text="wifi密码防火墙: "
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_ddos"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Ddos服务: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_ddos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_telnet"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Telnet协议: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_telnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_ftp"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="FTP协议: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_ftp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_samba"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Samba协议: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_samba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_virtual"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="虚拟服务: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_virtual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_dmz"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="DMZ主机: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_dma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_upnp"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="UPNP开关: 未检测"
+                    android:textColor="@color/gray_bdbdbd"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_upnp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/test_obing"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnInspection"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="20dp"
+            android:text="一键体检"
+            />
+
+    </LinearLayout>
+</layout>

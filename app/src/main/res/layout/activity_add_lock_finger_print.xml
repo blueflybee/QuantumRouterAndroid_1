@@ -1,0 +1,82 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_add_title"
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginEnd="44dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp"
+                android:text="请触碰门锁背后的按钮开启配置状态"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lock_pic_1"/>
+
+            <TextView
+                android:id="@+id/tv_add_tips"
+                android:visibility="visible"
+                style="@style/NormalTextViewStyle"
+                android:textColor="@color/blue_1194f6"
+                android:layout_gravity="center"
+                android:layout_marginEnd="44dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="50dp"
+                android:text="温馨提示：添加指纹需要您将手指多次抬起、按压位于门锁前部的指纹采集器。"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_press_tips"
+                android:visibility="invisible"
+                style="@style/NormalTextViewStyle"
+                android:textColor="@color/black_424242"
+                android:layout_gravity="center"
+                android:layout_marginEnd="44dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="-25dp"
+                android:text="请在门锁提示“请按指纹”后，按压指纹采集器"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_adding"
+                android:visibility="invisible"
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginEnd="44dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="22dp"
+                android:text="指纹录入中..."
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/btn_start_add"
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="46dp"
+                android:onClick="startAddFingerprint"
+                android:text="开始添加"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

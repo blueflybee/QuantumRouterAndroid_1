@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:visibility="visible"
+            android:layout_below="@id/title_bar"
+            android:id="@+id/rv_intel_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_no_lock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="95dp"
+                android:background="@drawable/pic2"/>
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:gravity="center_horizontal"
+                android:text="暂无门锁"
+                android:textSize="16sp"/>
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="快去添加门锁吧～"
+                android:textSize="16sp"/>
+
+            <Button
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="60dp"
+                android:onClick="addLock"
+                android:text="点击添加门锁"/>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

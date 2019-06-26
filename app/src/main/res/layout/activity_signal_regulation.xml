@@ -1,0 +1,169 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+       <!-- <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>-->
+
+        <FrameLayout
+            android:id="@+id/fl_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/signal_minbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/arrow_white"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信号调节"
+                android:textAppearance="@style/ToolbarTitleAppearance"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/signal_min"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_head"
+                    android:layout_marginTop="65dp"
+                    android:text="低辐射，让准妈妈安全省心"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal"
+            >
+
+            <FrameLayout
+                android:id="@+id/fl_pregnant_mode"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                >
+
+                <com.fernandocejas.android10.sample.presentation.view.component.RippleImageView
+                    android:id="@+id/img_pregnant_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:show_spacing_time="800"
+                    android:background="@drawable/signal_minic"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="孕妇"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_balance_mode"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                >
+
+                <com.fernandocejas.android10.sample.presentation.view.component.RippleImageView
+                    android:id="@+id/img_balance_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:show_spacing_time="800"
+                    android:layout_gravity="center"
+                    android:background="@drawable/signalic_mid"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="均衡"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_enhance_mode"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:layout_weight="1"
+                >
+
+                <com.fernandocejas.android10.sample.presentation.view.component.RippleImageView
+                    android:id="@+id/img_enhance_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:show_spacing_time="800"
+                    android:layout_gravity="center"
+                    android:background="@drawable/signalic_max"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="增强"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

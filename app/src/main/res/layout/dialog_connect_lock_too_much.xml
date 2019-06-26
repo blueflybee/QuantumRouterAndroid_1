@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_error_black"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="提示"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:text="检测到您的手机在门前时间过长，系统已经停止密钥校验以节省电量"
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_restart"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="重新开启"/>
+
+            <Button
+                android:id="@+id/btn_i_know"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="知道了"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ImageView
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/update"
+            android:id="@+id/iv_firmware_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:textColor="@color/black_424242"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_below="@+id/iv_firmware_pic"
+            android:id="@+id/tv_tips"
+            style="@style/TextViewStyle_1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="当前版本正在升级，请不要随意退出"
+            android:textColor="@color/black_424242"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_below="@+id/tv_tips"
+            android:id="@+id/tv_update_status"
+            style="@style/TextViewStyle_1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blue_2196f3"
+            android:textSize="15sp"/>
+
+        <ProgressBar
+            android:id="@+id/progress_update"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6.5dp"
+            android:layout_below="@id/tv_update_status"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="10dp"
+            android:progressDrawable="@drawable/dev_key_progressbar_bg"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray"/>
+
+        <CheckBox
+            android:id="@+id/cb_selectFile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/check_box_background"
+            android:button="@null"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/cb_selectFile"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_file_icon"
+                android:layout_width="30dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/image_list_childs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+            </RelativeLayout>
+            <!-- 用于显示文件名的文本框 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/rl_file_icon"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/text_list_childs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:ellipsize="end"
+                    android:maxWidth="235dp"
+                    android:singleLine="true"
+                    android:text="215621321132321231211212saasasasasas312asas212121211s23321"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/tv_date_list_childs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="2017/09/17 22:22"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_file_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@+id/tv_date_list_childs"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="12.1M"
+                        android:visibility="gone"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="10sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_spread"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img_spread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--   <include
+           file_paths="@file_paths/item_edit_samba_file"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@+id/rl_content"
+           android:visibility="gone"/>-->
+</RelativeLayout>

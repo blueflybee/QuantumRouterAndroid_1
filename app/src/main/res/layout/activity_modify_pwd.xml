@@ -1,0 +1,97 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+    <!--<import type="com.fernandocejas.android10.sample.presentation.data.User" />-->
+
+    <!--<variable-->
+    <!--name="user"-->
+    <!--type="User" />-->
+    <!--</data>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="18dp">
+
+
+            <TextView
+                android:id="@+id/tv_tip_title"
+                style="@style/NormalTextStyle"
+                android:textColor="@color/gray_888888"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/tv_tip_title"
+                android:layout_marginTop="18dp"
+                android:background="@color/gray_f3f3f3"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="18dp">
+
+            <EditText
+                android:id="@+id/et_enterVertifiCode"
+                style="@style/SmsCodeInputStyle"
+                android:layout_toLeftOf="@+id/tv_reSendVertifiCode"
+                android:hint="验证码"/>
+
+            <TextView
+                android:id="@+id/tv_reSendVertifiCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:onClick="sendVerificationCode"
+                android:text="重新发送"
+                android:textColor="@color/blue_2196f3"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/et_enterVertifiCode"
+                android:layout_marginTop="13dp"
+                android:background="@color/gray_f3f3f3"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/et_pwd"
+                style="@style/PwdInputStyle"
+                android:layout_toLeftOf="@+id/cb_show_pwd"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLength="20"/>
+
+            <CheckBox
+                android:id="@+id/cb_show_pwd"
+                style="@style/ShowPwdCheckBoxStyle"
+                android:onClick="changeInputType"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/cb_show_pwd"
+                android:layout_marginTop="13dp"
+                android:background="@color/gray_f3f3f3"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_modifyPwd"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="40dp"
+            android:onClick="modifyPwd"
+            android:text="完成"/>
+    </LinearLayout>
+</layout>

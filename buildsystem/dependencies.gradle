@@ -1,0 +1,137 @@
+allprojects {
+  repositories {
+    maven { url "http://dl.bintray.com/populov/maven" }
+    maven { url "https://jitpack.io" }
+
+    mavenCentral()
+    jcenter()
+  }
+}
+
+ext {
+  //Android
+//  androidBuildToolsVersion = "23.0.3"
+  androidBuildToolsVersion = "25.0.3"
+  androidMinSdkVersion = 18
+  androidTargetSdkVersion = 28
+  androidCompileSdkVersion = 28
+
+  //Libraries
+  //inject
+  daggerVersion = '2.0.2'
+  butterKnifeVersion = '7.0.1'
+  androidAnnotationsVersion = '25.3.1'
+  javaxAnnotationVersion = '10.0-b28'
+
+  //adapter
+  commonAdapterVersion = '1.1.8'
+
+  //ui
+  navigationtabstripVersion = '1.0.4'
+//  circleImageviewVersion = '2.0.0'
+
+  //event
+  rxJavaVersion = '1.3.0'
+  rxAndroidVersion = '1.2.1'
+
+  //http
+  okHttpVersion = '3.8.0'
+  retrofitVersion = '2.0.0-beta1'
+
+  //log
+  loggerVersion = '1.11'
+
+  //common utils
+  guavaVersion = '18.0'
+
+  //data parse
+  gsonVersion = '2.8.1'
+  jacksonVersion = '2.6.1'
+
+  //image handle
+  picassoVersion = '2.5.2'
+  universalimageloaderVersion = '1.9.4'
+  imagegalleryVersion = '0.0.9'
+  byakugalleryVersion = '0.1.+@aar'
+
+  //photo
+
+  //db
+  litepalVersion = '1.3.1'
+
+  //Testing
+  robolectricVersion = '3.0'
+  jUnitVersion = '4.12'
+  assertJVersion = '1.7.1'
+  mockitoVersion = '1.9.5'
+  dexmakerVersion = '1.0'
+  espressoVersion = '2.0'
+  testingSupportLibVersion = '0.1'
+
+  //Analytics
+  umengAnalyticsVersion = 'latest.integration'
+
+  presentationDependencies = [
+      daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+      dagger:             "com.google.dagger:dagger:${daggerVersion}",
+      butterKnife:        "com.jakewharton:butterknife:${butterKnifeVersion}",
+      rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+      rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
+      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+      logger:             "com.orhanobut:logger:${loggerVersion}",
+      guava:              "com.google.guava:guava:${guavaVersion}",
+      picasso:            "com.squareup.picasso:picasso:${picassoVersion}",
+      universalimageloader: "com.nostra13.universalimageloader:universal-image-loader:${universalimageloaderVersion}",
+      litepal:            "org.litepal.android:core:${litepalVersion}",
+      imagegallery: "com.github.lawloretienne:imagegallery:${imagegalleryVersion}",
+      byakugallery: "com.diegocarloslima:byakugallery:${byakugalleryVersion}",
+      umengAnalytics: "com.umeng.analytics:analytics:${umengAnalyticsVersion}",
+      commonAdapter:"com.github.tianzhijiexian:CommonAdapter:${commonAdapterVersion}",
+
+  ]
+
+
+  presentationTestDependencies = [
+      mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+      dexmaker:           "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+      dexmakerMockito:    "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+      espresso:           "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+      testingSupportLib:  "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+  ]
+
+  domainDependencies = [
+      daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+      dagger:             "com.google.dagger:dagger:${daggerVersion}",
+      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+      rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+      gson:               "com.google.code.gson:gson:${gsonVersion}",
+      jacksonCore:        "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
+      jacksonAnnotations: "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}",
+      jacksonDatabind:    "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+  ]
+
+  domainTestDependencies = [
+      junit:              "junit:junit:${jUnitVersion}",
+      mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+  ]
+
+  dataDependencies = [
+      daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+      dagger:             "com.google.dagger:dagger:${daggerVersion}",
+      okHttp:             "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+      rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+      rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
+      javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+      androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+      retrofit:           "com.squareup.retrofit:retrofit:${retrofitVersion}",
+      logger:             "com.orhanobut:logger:${loggerVersion}",
+
+  ]
+
+  dataTestDependencies = [
+      junit:              "junit:junit:${jUnitVersion}",
+      assertj:            "org.assertj:assertj-core:${assertJVersion}",
+      mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+      robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+  ]
+}

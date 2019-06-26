@@ -1,0 +1,156 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_backgroud_title"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/blue_2196f3"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smartwifi"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_head"
+                android:layout_marginTop="20dp"
+                android:text="智能宽带，智能分配应用网速"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/include_layout_offline"
+            android:visibility="gone"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_switch"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="智能宽带"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchBtn_band"
+                style="@style/SwitchStyle_1"
+                android:layout_marginTop="12dp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_intelligentBand"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_band_mode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="按照应用的优先级分配网速"
+                    android:singleLine="true"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_start_more"
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_navigate_next_black_48dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_speed_mode"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_start_more"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="自动模式"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/gray"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_band_speed"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="网关上传下载限制"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_end_more"
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_navigate_next_black_48dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,49 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+    <!--<import type="com.fernandocejas.android10.sample.presentation.view.device.router.data.Router.BaseInfo.InfoItem"/>-->
+
+    <!--<import type="android.view.View"/>-->
+
+    <!--<variable-->
+    <!--name="info"-->
+    <!--type="InfoItem"/>-->
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/tv_router_name"
+            style="@style/MineFeedbackTvStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_start_bind"
+            android:layout_marginStart="25dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:drawableStart="@drawable/ic_router_blue"/>
+
+        <Button
+            android:id="@+id/btn_start_bind"
+            style="@style/BlueButtonStyle"
+            android:layout_marginStart="0dp"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="开始绑定"
+            android:textSize="14sp"/>
+
+        <View
+            style="@style/LineHorizontalStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:background="@color/gray_bdbdbd"
+            />
+
+    </RelativeLayout>
+
+</layout>

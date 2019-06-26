@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_error"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/NormalTextViewStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="新建分组"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/et_group_name"
+        style="@style/DialogInputEditTextStyle"
+        android:layout_below="@+id/tv_title"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="25dp"
+        android:hint="请输入新分组名称"/>
+
+
+    <Button
+        android:id="@+id/btn_create_group"
+        style="@style/BlueButtonStyle"
+        android:layout_below="@+id/et_group_name"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="32dp"
+        android:text="新建"/>
+
+
+</RelativeLayout>

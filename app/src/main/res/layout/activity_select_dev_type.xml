@@ -1,0 +1,164 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rv_lock"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goAddLock">
+
+                    <ImageView
+                        android:id="@+id/iv_lock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/add_lock"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:text="安全智能锁"
+                        android:textSize="16sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rv_router"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goAddRouter">
+
+                    <ImageView
+                        android:id="@+id/iv_router"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/add_router"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:text="安全网关"
+                        android:textSize="16sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rv_lite_gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goAddLiteGateway">
+
+                    <ImageView
+                        android:id="@+id/iv_lite_gateway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/add_router"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:text="LITE网关"
+                        android:textSize="16sp"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rv_cateye"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goAddCatEye">
+
+                    <ImageView
+                        android:id="@+id/iv_cateye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/pic_cat"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:text="电子猫眼"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rv_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_white_selector"
+                    android:onClick="goAddCamera">
+
+                    <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/ic_pic_sxs"/>
+
+                    <TextView
+                        style="@style/NormalTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="90dp"
+                        android:text="视频监控"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

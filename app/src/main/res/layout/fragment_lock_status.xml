@@ -1,0 +1,338 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scroll_lock_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_fafafa"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_lock_router"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:id="@+id/ll_lock_has_router"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/ll_LockState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_open_remote_door"
+                            android:layout_width="312px"
+                            android:layout_height="312px"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_wrong2"
+                            />
+
+                        <com.fernandocejas.android10.sample.presentation.view.component.GifView
+                            android:id="@+id/gif_opening"
+                            android:layout_width="312px"
+                            android:layout_height="312px"
+                            android:layout_centerInParent="true"
+                            android:enabled="false"
+                            android:visibility="gone"
+                            app:gif="@raw/ic_dgif"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_LockState"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="6dp">
+
+                        <TextView
+                            android:id="@+id/tv_net_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableTop="@drawable/wifi_none"
+                            android:gravity="center_horizontal"
+                            android:text="未联网"
+                            android:textColor="@color/gray_bdbdbd"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_lock_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:drawablePadding="10dp"
+                            android:drawableTop="@drawable/lock_none"
+                            android:gravity="center_horizontal"
+                            android:text="未知"
+                            android:textColor="@color/gray_bdbdbd"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_battery_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:drawablePadding="10dp"
+                            android:drawableTop="@drawable/ele_none"
+                            android:gravity="center_horizontal"
+                            android:text="未知"
+                            android:textColor="@color/gray_bdbdbd"
+                            android:textSize="10sp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progress_refresh"
+                            android:visibility="gone"
+                            style="@style/LockStatusRefreshProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminateDuration="1200"/>
+
+                        <TextView
+                            android:id="@+id/tv_refresh_lock_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="刷新"
+                            android:textColor="@color/blue_2196f3"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_lock_no_router"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:text="您还未绑定网关，以下功能\n还无法使用，请尽快绑定哦～"
+                        android:textColor="@color/black_424242"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_lock_remote_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_tips"
+                        android:layout_marginTop="33dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/bg_wifi"
+                            android:gravity="center_horizontal"
+                            android:text="是否联网"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/bg_lock"
+                            android:gravity="center_horizontal"
+                            android:text="是否上锁"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/bg_ele"
+                            android:gravity="center_horizontal"
+                            android:text="门锁电量"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="10sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/bg_door"
+                            android:gravity="center_horizontal"
+                            android:text="远程开门"
+                            android:textColor="@color/gray_999999"
+                            android:textSize="10sp"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_bind"
+                        style="@style/BlueButtonStyle"
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/ll_lock_remote_status"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="45dp"
+                        android:layout_marginTop="30dp"
+                        android:text="开始绑定"
+                        android:textSize="14sp"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_lock_use_more"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rl_lock_router"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="门锁使用记录"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_lock_use_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:drawablePadding="3dp"
+                    android:drawableRight="@drawable/ic_navigate_next_black_48dp"
+                    android:gravity="center_vertical"
+                    android:text="更多"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_lock_use_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_lock_use_more"
+                android:visibility="gone"
+                >
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_lock_use_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none"/>
+
+                <include
+                    android:id="@+id/include_lock_empty_view"
+                    layout="@layout/empty_layout_lock_use_note"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_lock_exp_more"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rl_lock_use_list"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="异常状态提醒"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_exception_warn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:drawablePadding="3dp"
+                    android:drawableRight="@drawable/ic_navigate_next_black_48dp"
+                    android:gravity="center_vertical"
+                    android:text="更多"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_lock_exp_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_lock_exp_more"
+                android:visibility="gone"
+                >
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_exception_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none"/>
+
+                <include
+                    android:id="@+id/include_exception_empty_view"
+                    layout="@layout/empty_layout_exception_warn"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

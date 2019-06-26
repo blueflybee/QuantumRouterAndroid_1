@@ -1,0 +1,220 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <include layout="@layout/activity_format_disk"/>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/title_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/img_new_folder"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/nas_newdoc"
+                />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/nas_searchbg"
+                android:drawableLeft="@drawable/nas_search"
+                android:drawablePadding="5dp"
+                android:focusable="false"
+                android:hint="搜索文件"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_disk_info"
+            android:layout_below="@id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@color/gray_fafafa"
+            android:textColor="@color/gray_999999"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:text="磁盘已使用:"
+            />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close_header="700"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/tv_disk_info"
+            cube_ptr:ptr_resistance="1.8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    >
+
+                    <ExpandableListView
+                        android:id="@+id/lv_remoteFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/bottomBar_layout"
+                        android:layout_below="@+id/topBar_layout"
+                        android:divider="@null"
+                        android:groupIndicator="@null"
+                        android:visibility="visible"
+                        >
+                    </ExpandableListView>
+
+                    <ImageButton
+                        android:id="@+id/btn_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginRight="35dp"
+                        android:background="@drawable/nas_load"
+                        android:padding="5dp"
+                        />
+                </FrameLayout>
+
+
+            </RelativeLayout>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_empty_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="这里是空的，快去上传文件吧~"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/gray"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_424242"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_download_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/nas_filedownload"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="下载"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_move_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/nas_filemove"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="移动"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_delete_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/nas_filedelete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="删除"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

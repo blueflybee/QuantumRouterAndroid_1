@@ -1,0 +1,112 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.SearchRouterResponse"/>
+
+        <variable
+            name="rsp"
+            type="SearchRouterResponse"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewStyleGroup"
+                    android:text="智能搜索"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/ll_auto_searching"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <com.fernandocejas.android10.sample.presentation.view.component.GifView
+                            android:id="@+id/gif_add_search"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:gif="@raw/add_searching"
+                            android:layout_centerInParent="true"
+                            android:enabled="false"/>
+
+                        <TextView
+                            android:id="@+id/tv_search_fail"
+                            android:visibility="gone"
+                            style="@style/NormalTextViewStyle"
+                            android:textColor="@color/gray_999999"
+                            android:layout_centerInParent="true"
+                            android:text="搜索不到网关"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_auto_search_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:background="@drawable/view_white_selector"
+                        android:onClick="addDevAuto"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_router_name_auto"
+                            style="@style/MineFeedbackTvStyle"
+                            android:layout_marginStart="25dp"
+                            android:drawableLeft="@drawable/ic_router_black"
+                            android:text="@{rsp.hostname}"/>
+
+                        <ImageView
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/iv_client_auto"
+                            style="@style/MineFeedbackIvStyle"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/TextViewStyleGroup"
+                    android:text="手动添加"/>
+
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:visibility="gone"
+                    android:id="@+id/lv_routers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    tools:listitem="@layout/item_add_router">
+                </com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,87 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_wifi_name"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:text="WIFI名称"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@null"
+                android:maxWidth="255dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/black_424242"
+                android:layout_toEndOf="@+id/tv_wifi_name"
+                android:hint="请输入WIFI名称"
+                android:textSize="15sp"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/et_name"
+                android:layout_marginTop="12.5dp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/LoginInputItemLayoutStyle"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_pwd"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:text="WIFI密码"/>
+
+            <EditText
+                android:id="@+id/et_pwd"
+                style="@style/PwdInputStyle"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/tv_pwd"
+                android:layout_toLeftOf="@+id/iv_show_pwd"
+                android:hint="请输入WIFI密码"
+                android:inputType="textPassword"/>
+
+            <CheckBox
+                android:id="@+id/iv_show_pwd"
+                style="@style/ShowPwdCheckBoxStyle"
+                android:onClick="changeInputType"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_below="@id/iv_show_pwd"
+                android:layout_marginTop="12.5dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/ErrTipTvStyle"
+            android:layout_marginTop="17dp"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="180dp"
+            android:onClick="confirm"
+            android:text="确认"/>
+
+    </LinearLayout>
+</layout>

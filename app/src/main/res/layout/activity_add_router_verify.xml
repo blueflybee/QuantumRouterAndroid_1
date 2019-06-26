@@ -1,0 +1,83 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_router"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_admin_pwd"
+                style="@style/LoginInputItemLayoutStyle"
+                android:layout_marginTop="40dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/et_verify_enter_pwd"
+                    style="@style/PwdInputStyle"
+                    android:layout_toLeftOf="@+id/iv_show_pwd"
+                    android:hint="请输入网关管理员密码"
+                    android:inputType="textPassword"
+                    android:maxLength="63"/>
+
+                <CheckBox
+                    android:id="@+id/iv_show_pwd"
+                    style="@style/ShowPwdCheckBoxStyle"
+                    android:onClick="changeInputType"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_below="@id/iv_show_pwd"
+                    android:layout_marginTop="12.5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_new_router"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_bar"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_router_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/b_router"/>
+
+
+                <TextView
+                    style="@style/NormalTextViewStyle"
+                    android:layout_below="@id/iv_router_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:text="检测到这是一台新的网关，请直接点击绑定"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/ErrTipTvStyle"
+            android:layout_marginTop="17dp"/>
+
+        <Button
+            android:id="@+id/btn_verify_done"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="62.5dp"
+            android:onClick="bind"
+            android:text="绑定网关"/>
+
+    </LinearLayout>
+</layout>

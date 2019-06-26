@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_safe_device_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/tv_safe_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxWidth="265dp"
+                android:paddingLeft="25dp"
+                android:singleLine="true"
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_safe_group_state"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="等待检测"
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

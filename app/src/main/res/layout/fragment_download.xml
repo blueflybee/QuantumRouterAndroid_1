@@ -1,0 +1,209 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_f5f5f5"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            >
+            <Button
+                android:id="@+id/btn_delete_download"
+                android:layout_height="35dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/btn_red_pressed"
+                android:text="删除"
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView_download"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_delete"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:background="@color/gray_f5f5f5"
+                        >
+                        <TextView
+                            android:id="@+id/tv_loading_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="正在下载  (0)"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            />
+                        <Button
+                            android:id="@+id/btn_edit_downloading"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="编辑"
+                            android:visibility="gone"
+                            android:background="@null"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_selectall_downloading"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="全选"
+                            android:visibility="gone"
+                            android:background="@null"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/btn_edit_downloading"
+                            android:textColor="@color/black_424242"
+                            android:textSize="12sp"
+                            />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_allDownload"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/nas_loadbuttonbg"
+                        android:text="全部开始下载"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        />
+
+                    <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                        android:id="@+id/lv_download"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                        android:id="@+id/lv_download_waiting"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:background="@color/gray_f5f5f5"
+                    >
+                    <TextView
+                        android:id="@+id/tv_finish_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:background="@color/gray_f5f5f5"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="下载成功  (0)"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        />
+                    <Button
+                        android:id="@+id/btn_edit_downloaded"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="编辑"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_selectall_downloaded"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="全选"
+                        android:background="@null"
+                        android:visibility="gone"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/btn_edit_downloaded"
+                        android:textColor="@color/black_424242"
+                        android:textSize="12sp"
+                        />
+
+                </RelativeLayout>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_finish_download"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    />
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ExpandableListViewForScrollView
+                    android:id="@+id/lv_finish_download1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:visibility="gone"
+                    >
+                </com.fernandocejas.android10.sample.presentation.view.component.ExpandableListViewForScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_empty_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="您还没有下载记录哦~"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/black_424242"
+            />
+
+    </RelativeLayout>
+</layout>

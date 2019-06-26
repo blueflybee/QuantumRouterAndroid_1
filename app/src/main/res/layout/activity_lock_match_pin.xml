@@ -1,0 +1,89 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<data>-->
+
+    <!--<import type="com.qtec.router.model.rsp.SearchRouterResponse" />-->
+
+    <!--<variable-->
+    <!--name="rsp"-->
+    <!--type="SearchRouterResponse" />-->
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <com.fernandocejas.android10.sample.presentation.view.component.ChangeSpaceTextView
+            android:id="@+id/tv_pin"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text=""
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/tv_pin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="57dp"
+            android:text="请在门锁数字键盘上输入6位密码"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lockpicpoint"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="40dp"
+                android:text="在门锁的数字键盘上输入上方六位数字，并点击#键。此步骤会耗费一定时间，请耐心等候。"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ll_tips"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/white_transparent"
+            android:onClick="skip"
+            android:drawablePadding="5dp"
+            android:text="跳过此步骤"
+            android:drawableRight="@drawable/keyskip"
+            android:textColor="@color/gray_999999"
+            android:textSize="13dp"/>
+
+
+    </RelativeLayout>
+</layout>

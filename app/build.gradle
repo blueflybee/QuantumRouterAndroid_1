@@ -1,0 +1,253 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+//lambda
+//apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+//    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+
+        applicationId globalConfiguration.getAt("androidApplicationId")
+        versionCode globalConfiguration.getAt("androidVersionCode")
+        versionName globalConfiguration.getAt("androidVersionName")
+        testInstrumentationRunner globalConfiguration.getAt("testInstrumentationRunner")
+        testApplicationId globalConfiguration.getAt("testApplicationId")
+
+        /*   ndk {
+               //选择要添加的对应cpu类型的.so库。为了兼容cpu，查看官网SDK的libs多添加几个
+               abiFilters  'arm64-v8a', 'armeabi', 'armeabi-v7a', 'mips', 'mips64', 'x86', 'x86_64'
+           }*/
+
+        ndk {
+            abiFilters "armeabi"
+        }
+
+//        jackOptions {
+//            enabled true
+//        }
+
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'            //Some libraries have issues with this.
+        disable 'OldTargetApi'
+        //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable 'IconDensities'             //For testing purpose. This is safe to remove.
+        disable 'IconMissingDensityFolder'  //For testing purpose. This is safe to remove.
+    }
+
+    signingConfigs {
+        debug {
+            /* File strFile = new File("/home/shaojun/WorkSpaces/AndroidWorkspaces/Work/QuantumRouterAndroid/sign/smart_home_debug.jks")
+             storeFile file(strFile)
+             storePassword "qtec123456"
+             keyAlias "debugkey0"
+             keyPassword "qtec123456"*/
+            //println strFile.absolutePath;
+            keyAlias 'key0'
+            keyPassword 'qtec123456'
+            storeFile file('/home/shaojun/WorkSpaces/AndroidWorkspaces/Work/QuantumRouterAndroid/sign/smart_home_release.jks')
+            storePassword 'qtec123456'
+        }
+        release {
+            File strFile = new File("/home/shaojun/WorkSpaces/AndroidWorkspaces/Work/QuantumRouterAndroid/sign/smart_home_release.jks")
+            storeFile file('/home/shaojun/WorkSpaces/AndroidWorkspaces/Work/QuantumRouterAndroid/sign/smart_home_release.jks')
+            storePassword "qtec123456"
+            keyAlias "key0"
+            keyPassword "qtec123456"
+            // println strFile.absolutePath;
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false  // false表示不混淆，true表示混淆
+            shrinkResources false //移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false  // false表示不混淆，true表示混淆
+            shrinkResources false //移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+
+            //Zipalign优化
+            zipAlignEnabled true
+            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    flavorDimensions "mode"
+//    // If you need to add more flavors, consider using flavor dimensions.
+    productFlavors {
+        mock {
+            dimension "mode"
+//            applicationIdSuffix = ".mock"
+            applicationId = "com.qtec.router.mock"
+
+        }
+//        dev {
+//            applicationIdSuffix = ".dev"
+//        }
+        prod {
+            dimension "mode"
+            applicationId = "com.qtec.router"
+
+        }
+    }
+
+//    // Remove mockRelease as it's not needed.
+    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('release')
+                && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true);
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    project.gradle.startParameter.excludedTaskNames.add("lint")
+
+}
+
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/aliyun-oss-sdk-android-2.3.0.jar')
+
+    //implementation files('libs/zxing.jar')
+
+    //    implementation project(':domain')
+    implementation project(':data')
+
+    //    apt presentationDependencies.daggerCompiler
+    annotationProcessor presentationDependencies.daggerCompiler
+    implementation presentationDependencies.dagger
+    implementation presentationDependencies.rxJava
+    implementation presentationDependencies.rxAndroid
+    compileOnly presentationDependencies.javaxAnnotation
+    implementation presentationDependencies.logger
+    implementation presentationDependencies.guava
+
+    //    implementation presentationDependencies.umengAnalytics
+
+    //  implementation presentationDependencies.androidCrop
+    implementation presentationDependencies.commonAdapter
+
+    //    implementation presentationDependencies.androidCommon
+
+    //    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+
+    // Dependencies for local unit tests
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+
+    //    androidTestImplementation "junit:junit:$rootProject.ext.junitVersion"
+
+    //    androidTestImplementation presentationTestDependencies.mockito
+
+    //    androidTestImplementation presentationTestDependencies.dexmaker
+
+    //    androidTestImplementation presentationTestDependencies.dexmakerMockito
+
+    //    androidTestImplementation presentationTestDependencies.espresso
+
+    //    androidTestImplementation presentationTestDependencies.testingSupportLib
+
+    //    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.1'
+
+    //ali-push
+
+    //    implementation 'com.aliyun.ams:alicloud-android-push:3.0.6@aar'
+
+    //    implementation 'com.aliyun.ams:alicloud-android-utdid:1.1.5.3'
+
+    //    implementation 'com.aliyun.ams:alicloud-android-ut:5.0.0'
+    implementation 'com.aliyun.ams:alicloud-android-push:3.1.2'
+    implementation 'com.aliyun.ams:alicloud-android-third-push:3.0.5@aar'
+    implementation 'in.srain.cube:ptr-load-more:1.0.5'
+
+    //glide
+
+    //    implementation 'com.github.bumptech.glide:glide:4.0.0-RC1'
+
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+
+    //action sheet
+    implementation 'com.baoyz.actionsheet:library:1.1.7'
+    implementation 'com.github.blueflybee:android-update:v1.0.6'
+    implementation 'com.github.blueflybee:circle-progress-android:v0.0.2'
+    implementation 'com.github.blueflybee:password-input-android:v0.0.2'
+    implementation name: 'blelibrary-v0.0.81', ext: 'aar'
+    implementation name: 'keylibrary-0.0.15', ext: 'aar'
+    implementation name: 'uilibrary1-v0.0.10', ext: 'aar'
+    implementation name: 'esptouch-v1.0.0', ext: 'aar'
+    implementation name: 'guide-v0.0.1', ext: 'aar'
+    implementation('com.github.blueflybee:photo-out:v0.0.1') {
+        exclude group: 'io.reactivex.rxjava2'
+    }
+    implementation 'com.github.blueflybee.photo-picker:glide:v0.0.1'
+    implementation 'com.github.blueflybee:MQTTAndroid:v0.0.8'
+
+    /*猫眼账号相关 jar*/
+    implementation name: 'sov-server-1.3.1-release', ext: 'aar'
+    implementation project(':csambalib')
+
+    /*图片多选*/
+    implementation 'com.yanzhenjie:album:1.0.0'
+
+    /*友盟统计*/
+    implementation 'com.umeng.analytics:analytics:latest.integration'
+
+    //wexin
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.6'
+}

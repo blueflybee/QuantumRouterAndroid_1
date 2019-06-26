@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <TextView
+            android:id="@+id/tv_add_finger_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="添加指纹需要您将手指多次抬起、按\n压位于门锁前部的指纹采集器"
+            android:textColor="@color/black_424242"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/lock_pic"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/lock_pic"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_addFinger"
+            style="@style/BlueButtonStyle"
+            android:layout_marginTop="80dp"
+            android:text="开始添加"
+            android:visibility="visible"
+            />
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:lineSpacingExtra="5dp"
+            android:text="指纹录入中…"
+            android:textColor="@color/black_424242"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</layout>

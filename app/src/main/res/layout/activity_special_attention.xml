@@ -1,0 +1,168 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_special_attention"
+            android:layout_below="@id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/blue_2196f3"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/noun_contr"
+                    />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_head"
+                    android:layout_marginTop="20dp"
+                    android:text="及时查收家人上线、下线消息，了解家人上网动态"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/include_layout_offline"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:visibility="gone"
+            android:layout_below="@+id/title_bar"
+            android:layout_above="@+id/btn_finish_attention"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@color/blue_2196f3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/noun_contr"
+                        />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_head"
+                        android:layout_marginTop="20dp"
+                        android:text="及时查收家人上线、下线消息，了解家人上网动态"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_special_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/ll_top"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="添加特别关注"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_more"
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ic_navigate_next_black_48dp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_attention_decrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="特别关注设备"
+                    android:layout_below="@+id/rl_add_special_attention"
+                    android:textColor="@color/black_424242"
+                    android:visibility="gone"
+                    android:textSize="13sp"/>
+
+                <com.fernandocejas.android10.sample.presentation.view.component.ListViewForScrollView
+                    android:id="@+id/lv_special_attention"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_attention_decrip"
+                    android:divider="@null"
+                    android:dividerHeight="5dp"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_finish_attention"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="完成"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/btn_blue_2196f3_selector"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+
+            />
+
+    </RelativeLayout>
+</layout>

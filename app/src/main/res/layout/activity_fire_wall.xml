@@ -1,0 +1,272 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_titlebar"
+            android:visibility="visible"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="44dp"
+                android:layout_height="43dp"
+                android:background="@mipmap/ic_launcher"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_head"
+                android:layout_marginTop="20dp"
+                android:text="及时插手家人上线、下线消息，了解家人上网动态"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="密码强度防火墙"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_pwd_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="防止设置简单、易破解的WiFi密码"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="WiFi密码防火墙"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_wifi_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="防止设置简单、易破解的WiFi密码"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="手机上网防火墙"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_phone_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="拦截恶意网址，防止下载垃圾应用"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="网购防火墙"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_shopping_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="保证资金账号安全"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="上网劫持防火墙"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_internet_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="防止恶意广告、钓鱼网站、挂马网站"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="陌生人上线提醒"
+                        android:textColor="@color/black_424242"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_online_wall"
+                        android:layout_width="40dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/ic_off"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="25dp"
+                    android:text="从未连接过的用户连接WiFi将提醒管理员"
+                    android:textColor="@color/black_424242"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

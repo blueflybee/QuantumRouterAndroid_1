@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <CheckBox
+            android:id="@+id/cb_select_smb_file"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/check_box_background"
+            android:button="@null"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_transit_headIcon"
+            android:layout_width="30dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/cb_select_smb_file"
+            android:layout_marginLeft="10dp"
+            />
+        <!-- 用于显示文件名的文本框 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_transit_headIcon"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_transit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxWidth="245dp"
+                android:singleLine="true"
+                android:textColor="@color/black_424242"
+                android:text="战狼2(剩余4个)122222222222222222222222222222121"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_transit_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxWidth="245dp"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="368K/1.64M12222222222222222222222222222222222222222222222222222121"
+                android:textColor="@color/gray_999999"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

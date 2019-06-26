@@ -1,0 +1,107 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<data>-->
+
+    <!--<import type="com.qtec.router.model.rsp.SearchRouterResponse" />-->
+
+    <!--<variable-->
+    <!--name="rsp"-->
+    <!--type="SearchRouterResponse" />-->
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_loading_key"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_key_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/key_contour">
+
+                <com.flybluebee.circleprogress.CircleProgress
+                    android:id="@+id/progress_load_key"
+                    android:layout_width="198dp"
+                    android:layout_height="198dp"
+                    android:layout_centerInParent="true"
+                    custom:bgColor="@color/gray_fafafa"
+                    custom:currProgress="0"
+                    custom:foreEndColor="@color/blue_48b6f4"
+                    custom:foreStartColor="@color/blue_2196f3"
+                    custom:maxProgress="360"
+                    custom:progressInitialPosition="-90"
+                    custom:progressWidth="15dp"
+                    custom:useAnimation="true"
+                    custom:useGradient="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/key_key"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_key_progress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="0"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_progress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text=""
+                android:visibility="invisible"
+                android:textColor="@color/blue_2196f3"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_reload_key"
+                android:layout_below="@+id/tv_tips"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                style="@style/BlueButtonStyle"
+                android:onClick="reloadKey"
+                android:text="重新获取"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_load_finish"
+                android:layout_below="@+id/tv_tips"
+                android:layout_marginTop="30dp"
+                android:onClick="injectFinish"
+                style="@style/BlueButtonStyle"
+                android:text="下一步"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:id="@+id/cb_select_smb_file"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/check_box_background"
+            android:button="@null"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_transit_headIcon"
+            android:layout_width="30dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/cb_select_smb_file"
+            />
+        <!-- 用于显示文件名的文本框 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_transit_headIcon"
+            android:layout_toLeftOf="@+id/ccp_circleProgress"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_transit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxWidth="245dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black_424242"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/tv_transit_size"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:maxWidth="245dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_999999"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tv_transit_speed"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:maxWidth="245dp"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_999999"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.fernandocejas.android10.sample.presentation.view.device.router.tools.safestore.utils.CustomCircleProgress
+            android:id="@+id/ccp_circleProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

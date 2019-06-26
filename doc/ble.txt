@@ -1,0 +1,121 @@
+张达自
+张达自
+没啥好办法，我的解决方法是，用gatt.disconnect()来断开连接，然后在连接之前调用gatt.close()，用 device.connectGatt(mContext, false, mGattCallback)来连接，出现133就重连。
+
+
+我觉得不是close没有执行的原因，当然你的解决方法（在每次connect前，检查是否已经有了Gatt对象，有了的话，就close，然后建立连接重新分配-这个方法）是没错的。
+真实的原因是每一次连接都会生成一个Gatt对象，每一个Gatt对象都需要断开连接，不然的话，一旦其中有一个Gatt对象没有断开连接，系统就会认为你是在连接的，让你连扫描都扫描不到这个设备，
+就别说继续连接了。。。。你的方法是正好保证了系统中只有一个Gatt对象，且把真实的（也就是最后的那个）给保存了起来，用于实际操作。而disconnect本身在这个算法里面就可以代替close。
+close和disconnect的区别在于，close除了断开连接外，还会释放掉所有资源，导致不可以直接在后面的操作中用gatt对象的connect直接连接，而disconnect并不释放资源，
+所以，所有的资源还保存着，就可以用Gatt的connect进行简单恢复连接，而不是在device那一层进行操作。至于为啥允许可以对一个外设连接多次，这个事情我也很纳闷，不知道什么场景需要这样的操作。。。
+
+/*
+ * 通过使用if(gatt==null)来判断gatt是否被创建过，如果创建过就使用gatt.connect();重新建立连接。
+ * 但是在这种情况下测试的结果是重新连接需要花费很长的时间。
+ * 解决办法是通过gatt = device.connectGatt(this, false, gattCallback);建立一个新的连接对象，很明显这样的速度要比上一种方法快很多
+ * 然而，多次创建gatt连接对象的直接结果是创建过6个以上gatt后就会再也连接不上任何设备，原因应该是android中对BLE限制了同时连接的数量为6个
+ * 解决办法是在每一次重新连接时都执行一次gatt.close();关闭上一个连接。
+ * 有人说为什么不在gatt.disconnect();后加一条gatt.close();呢，原因是如果立即执行gatt.close();会导致gattCallback无法收到STATE_DISCONNECTED的状态。
+ * 当然，最好的办法是在gattCallback收到STATE_DISCONNECTED后再执行gatt.close();，这样逻辑上会更清析一些。
+ */
+
+  Android ble 连接不上问题
+ 标签： Androidbluetooth
+ 2016-11-22 18:27 1618人阅读 评论(2) 收藏 举报
+ 分类：
+ Android（7）
+
+ 版权声明：本文为博主原创文章，未经博主允许不得转载。
+
+ 问题：
+
+ 手机作为ble服务器在发现客户端后主动连接，连接失败。
+
+ 现象：
+
+ 在调用bluetoothDevice.connectgatt(BluetoothDevice,autoconnect,BluetoothGattCallback);
+ 后，在BluetoothGattCallback中的onConnectionStateChange(BluetoothGatt gatt , int status , int newState)回调中 newState状态为 BluetoothProfile.STATE_DISCONNECTED
+ 解决方式：
+ 在onConnectionStateChange(BluetoothGatt gatt , int status , int newState)回调中打印第二个参数(status)的值。
+ 值为0：直接调用gatt.connect()重新连接。
+ 值不为0（值为133/257等）： ①首先执行gatt.close()清除连接;
+
+       ②然后重新调用
+ bluetoothDevice.connectgatt(BluetoothDevice,autoconnect,BluetoothGattCallback); 建立连接
+
+ 原因分析：
+
+ 值为0：不确定因素导致连接失败。不确定因素可能为信号太弱等。
+
+ 值不为0：由于协议栈原因导致连接建立失败。所以清除掉连接后重新建立连接。
+
+ ///////////////////////////////////////////////
+ Anroid连接BLE的两个坑
+ 原创 2016年11月07日 11:11:59
+
+     标签：
+     Android /
+     蓝牙 /
+     BLE
+
+ 因为项目有个需要连接ble设备的，有些手机能够连接上，有些手机就会一直报status=133的错误。
+
+ 原因有两个：
+
+ 1、断开连接用的BluetootGatt.disconnect()，这样只是断开连接，并没有关闭，因为BluetoothGatt连接个数有限制，所以必须关闭连接：
+
+ [java] view plain copy
+
+            **
+     * Close this Bluetooth GATT client.
+     *
+     * Application should call this method as early as possible after it is done with
+     * this GATT client.
+     */
+
+
+ 所以，每次使用完连接后必须调用BluetoothGatt.close();
+
+ 2、 如果以上已经做好，却发现还是出现status=133，此时错误很可能是传输层的模式的问题。在android5.0（不包括）以下，不支持设置模式，连接ble的函数为：
+
+ [java] view plain copy
+
+     public BluetoothGatt connectGatt(Context context, boolean autoConnect,BluetoothGattCallback callback)
+
+ 而5.0和5.1两个版本内部源码多了一个新的连接方法，但是此方法不公开，可以通过反射调用：
+
+ [java] view plain copy
+
+     /**
+          * @param transport preferred transport for GATT connections to remote dual-mode devices
+          *             {@link BluetoothDevice#TRANSPORT_AUTO} or
+          *             {@link BluetoothDevice#TRANSPORT_BREDR} or {@link BluetoothDevice#TRANSPORT_LE}
+          */
+         public BluetoothGatt connectGatt(Context context, boolean autoConnect,
+                                          BluetoothGattCallback callback, int transport)
+
+
+
+ 其中的transport就是设置传输层模式的，根据源码，一共有三种模式，默认是TRANSPORT_AUTO。
+
+ 6.0及以上版本这个方法是公开的，不需要用反射来调用了。
+ [java] view plain copy
+
+     /**
+           * No preferrence of physical transport for GATT connections to remote dual-mode devices
+           */
+         public static final int TRANSPORT_AUTO = 0;
+
+         /**
+          * Prefer BR/EDR transport for GATT connections to remote dual-mode devices
+          */
+         public static final int TRANSPORT_BREDR = 1;
+
+         /**
+          * Prefer LE transport for GATT connections to remote dual-mode devices
+          */
+         public static final int TRANSPORT_LE = 2;
+
+ 有些5.0及5.1的手机可以通过反射将transport设置为TRANSPORT_LE，然后就可以连接。而实际情况下，有些ble设备还是无法连接，这时可以再换用TRANSPORT_BREDR来试试。
+ 而TRANSPORT_LE和TRANSPORT_BREDR具体代表的意思就需要去咨询专门做蓝牙的技术人员了。
+

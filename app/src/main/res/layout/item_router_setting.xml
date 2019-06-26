@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.fernandocejas.android10.sample.presentation.view.device.router.data.Router.RouterSetting"/>
+
+        <variable
+            name="setting"
+            type="RouterSetting"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_dev_frag_router"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_setting_name"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            android:text="@{setting.name}"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/gray_999999"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:textSize="14sp"
+            android:text="@{setting.status}"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            style="@style/MineFeedbackIvStyle"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+</layout>

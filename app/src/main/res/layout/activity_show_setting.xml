@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <RelativeLayout
+
+            android:id="@+id/rl_clickDoor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="按门铃亮屏"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchBtn_clickDoor"
+                style="@style/SwitchStyle_1"
+                android:layout_marginTop="12dp"
+                />
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_screenOff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_clickDoor"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onScreenOffClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="息屏时间"/>
+
+            <TextView
+                android:id="@+id/tv_wake_time"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_screen_off"
+                android:text=""
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_screen_off"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+
+            android:id="@+id/rl_language_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_screenOff"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onLanguageTypeClick"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="语言类型"/>
+
+            <TextView
+                android:id="@+id/tv_language"
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_language"
+                android:text=""
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_language"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.qtec.router.model.rsp.RouterStatusResponse.Status"/>
+
+        <variable
+            name="status"
+            type="Status"/>
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_client_icon"
+            android:layout_width="21dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_client_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_phone"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/rl_client_icon"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_client_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxWidth="200dp"
+                    android:text="@{status.staname}"
+                    android:textColor="@color/black_424242"
+                    android:textSize="15sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/tv_client_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_client_name"
+                    android:text="本机"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:background="@drawable/own_equip"
+                    android:textColor="@color/blue_2196f3"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_client_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/gray_999999"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_connect_status"
+            android:layout_width="17.5dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/ic_wifi_black"/>
+
+        <TextView
+            android:id="@+id/tv_client_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/gray_999999"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"/>
+    </RelativeLayout>
+
+
+</layout>

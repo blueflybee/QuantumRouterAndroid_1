@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/add_router"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_height="5dp"
+                android:background="@color/gray_fafafa"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_gate_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector"
+                android:onClick="modifyGateName">
+
+                <TextView
+                    android:id="@+id/tv_gate_name_label"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="网关名称"/>
+
+                <TextView
+                    android:id="@+id/tv_gate_name"
+                    style="@style/NormalTextViewStyle_1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_toLeftOf="@+id/iv_gate_name"
+                    android:layout_toRightOf="@+id/tv_gate_name_label"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_gate_name"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginEnd="20dp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/view_white_selector"
+                android:onClick="modifyGateName">
+
+                <TextView
+                    android:id="@+id/tv_gate_id_label"
+                    style="@style/NormalTextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:text="网关序列号"/>
+
+                <TextView
+                    android:id="@+id/tv_gate_id"
+                    style="@style/NormalTextViewStyle_1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_toLeftOf="@+id/iv_gate_id"
+                    android:layout_toRightOf="@+id/tv_gate_id_label"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_gate_id"
+                    android:visibility="invisible"
+                    style="@style/MineFeedbackIvStyle"
+                    android:layout_marginEnd="20dp"/>
+
+                <View
+                    style="@style/LineHorizontalStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

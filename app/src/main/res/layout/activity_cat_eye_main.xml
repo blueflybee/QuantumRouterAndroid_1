@@ -1,0 +1,292 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            >
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:onClick="onTitleBarBackClick"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/topbar_back"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="电子猫眼"
+                android:textColor="@color/black_424242"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_openRemoteDoor"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="远程开门"
+                    android:textColor="@color/blue_2196f3"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_voice_talk"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_cat_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_qmess"
+                android:gravity="center"
+                android:onClick="onCatMsgClick"
+                android:padding="5dp"
+                android:text="消息"
+                android:textColor="@color/black_424242"
+                android:textSize="11sp"
+                />
+
+            <ImageView
+                android:id="@+id/img_start_voice_talk"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_cat_msg"
+                android:background="@drawable/ic_begin_intercom"
+                android:onClick="onCatStartVoiceClick"
+                />
+
+            <TextView
+                android:id="@+id/tv_cat_set"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/img_start_voice_talk"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_qset"
+                android:gravity="center"
+                android:onClick="onCatSettingClick"
+                android:padding="5dp"
+                android:text="设置"
+                android:textColor="@color/black_424242"
+                android:textSize="11sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_operate"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_above="@id/rl_voice_talk"
+            android:layout_marginBottom="60dp"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_voice"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:onClick="onVoiceClick"
+                >
+
+                <ImageView
+                    android:id="@+id/img_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_voice_press"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_video"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/rl_voice"
+                android:gravity="center"
+                android:onClick="onVideoClick"
+                >
+
+                <ImageView
+                    android:id="@+id/img_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_video_press"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_pic"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/rl_video"
+                android:gravity="center"
+                android:onClick="onPicClick"
+                >
+
+                <ImageView
+                    android:id="@+id/img_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_picture_press"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/rl_pic"
+                android:gravity="center"
+                android:onClick="onStreamClick"
+                >
+
+                <ImageView
+                    android:id="@+id/img_video_stream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_aliuchang"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:onClick="onScreenAlmostClick"
+                >
+
+                <ImageView
+                    android:id="@+id/img_screen_most"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_allp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_screen_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_operate"
+            android:layout_below="@id/title_bar"
+            >
+
+            <SurfaceView
+                android:id="@+id/sv_surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_linkState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:id="@+id/ll_stream_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_stream_state_super"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="超清"
+                    android:textColor="#FFFFFF"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_stream_state_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:text="高清"
+                    android:textColor="#FFFFFF"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_stream_state_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:text="流畅"
+                    android:textColor="#FFFFFF"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_start_voice_talk_land"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ic_begin_intercom"
+                android:onClick="onCatStartVoiceClick"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_fafafa"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cube_ptr:ptr_duration_to_close_header="700"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            android:layout_below="@+id/title_bar"
+            cube_ptr:ptr_resistance="1.8">
+
+            <RelativeLayout
+                android:layout_below="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/lv_questionsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    />
+
+                <include
+                    android:id="@+id/include_my_advice_empty_view"
+                    layout="@layout/empty_layout_my_advice"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </RelativeLayout>
+</layout>

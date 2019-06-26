@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<data>-->
+
+    <!--</data>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="closeDialog"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_error_black"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/NormalTextViewStyle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text=""
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_centerHorizontal="true"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_centerHorizontal="true"
+            style="@style/NormalTextViewStyle"
+            android:textColor="@color/blue_2196f3"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tips"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_left"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:onClick="leftBtnClick"
+                android:layout_weight="1"
+                android:text="取消"/>
+
+            <Button
+                android:id="@+id/btn_right"
+                style="@style/BlueButtonStyle_NoMargin"
+                android:layout_marginStart="10dp"
+                android:onClick="rightBtnClick"
+                android:layout_weight="1"
+                android:text="查看"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

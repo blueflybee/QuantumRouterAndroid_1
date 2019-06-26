@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f3f3f3"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_showSetting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_bar"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onShowSettingOnClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_infor"
+                android:drawablePadding="15dp"
+                android:text="显示设置"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_dhcp"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_timeZone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_showSetting"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onTimeZoneOnClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_time_set"
+                android:drawablePadding="15dp"
+                android:text="时间时区"/>
+
+            <ImageView
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_intelligentSetting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_timeZone"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onIntelligentSettingOnClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_intelligent_set"
+                android:drawablePadding="15dp"
+                android:text="智能设置"/>
+
+            <ImageView
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_connect_lock"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_intelligentSetting"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onConnectLockOnClick"
+            >
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_lock_set"
+                android:drawablePadding="15dp"
+                android:text="配对门锁"/>
+
+            <TextView
+                android:id="@+id/tv_cat_paired_state"
+                style="@style/NormalTextViewStyle"
+                android:layout_width="200dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@+id/iv_arrow_connect"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/gray_999999"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_arrow_connect"
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/rl_aboutCatEye"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_connect_lock"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onAboutCatEyeOnClick">
+
+
+            <TextView
+                style="@style/NormalTextViewStyle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:drawableLeft="@drawable/ic_us"
+                android:drawablePadding="15dp"
+                android:text="关于猫眼"/>
+
+            <ImageView
+                style="@style/MineFeedbackIvStyle"
+                android:layout_marginEnd="20dp"/>
+
+            <View
+                style="@style/LineHorizontalStyle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_aboutCatEye"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:background="@drawable/view_white_selector"
+            android:onClick="onUnbindCatClick">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/red_ff504c"
+                android:text="解除绑定"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/banben_wrong"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_version_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close"
+        android:background="@drawable/banben_bg"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_below="@id/iv_version_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            style="@style/NormalTextViewStyle"
+
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="18dp"
+            android:text="V3.1.0更新"
+            android:textColor="@color/blue_2b98f0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_version_info"
+            style="@style/NormalTextViewStyle"
+            android:layout_below="@+id/tv_version_name"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="13dp"
+            android:gravity="start"
+            android:text="1.优化部分功能\n2.增加一键体检功能"
+            android:textColor="@color/gray_979797"
+            android:textSize="15sp"/>
+
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/BlueButtonStyle"
+            android:layout_below="@+id/tv_version_info"
+            android:layout_marginBottom="42dp"
+            android:layout_marginTop="40dp"
+            android:text="立即更新"/>
+
+    </RelativeLayout>
+</RelativeLayout>

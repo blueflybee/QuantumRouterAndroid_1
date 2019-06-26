@@ -1,0 +1,67 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_titlebar"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/lock_pic_1"/>
+
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="您已经连接门锁"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_lock_name"
+                style="@style/NormalTextViewStyle"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_lock_tips"
+                style="@style/NormalTextViewStyle"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="请触碰门锁背后的按钮开启配置状态"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/BlueButtonStyle"
+                android:layout_marginTop="54dp"
+                android:onClick="addLock"
+                android:text="开始添加"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

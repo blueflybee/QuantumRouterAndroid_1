@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_lock_exception_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/tv_lock_exception_time"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/tv_lock_exception_date"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_lock_exception_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="门锁"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_lock_exception_content"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@+id/tv_lock_exception_time"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            />
+
+        <View
+            android:layout_below="@+id/tv_lock_exception_date"
+            style="@style/LineHorizontalStyle"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+
+</layout>
